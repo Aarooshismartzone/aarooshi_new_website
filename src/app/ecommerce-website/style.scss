@@ -1,0 +1,10 @@
+.bgdd {
+    @apply col-span-4;
+    background-image: url('../../../public/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-section{
+    @apply bg-gray-800 text-white py-10 lg:px-48 md:px-32 sm:px-24 px-12 opacity-90
+}

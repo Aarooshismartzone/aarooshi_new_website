@@ -23,7 +23,8 @@ export default function Home() {
     cls9: 'h-4 w-4 bg-gray-600',
     ocs: 'flex gap-4 justify-between p-2',
     box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50',
-    linkCl: 'hidden'
+    linkCl: 'hidden',
+    info: 'text-white font-bold mt-2 mx-5'
   });
 
   const cls1 = value.cls1
@@ -38,6 +39,7 @@ export default function Home() {
   const ocs = value.ocs
   const box = value.box
   const linkCl = value.linkCl
+  const info = value.info
 
   function expand() {
     newValue(a => {
@@ -55,41 +57,42 @@ export default function Home() {
         cls9: 'md:h-24 md:w-24 w-16 h-16 md:bg-gray-300 hover:bg-gray-100 bg-transparent duration-400 p-1 clss9',
         ocs: 'flex md:gap-4 gap-2 md:p-3 px-1 py-3 md:justify-between justify-evenly',
         box: 'relative flex flex-col justify-between align-middle bg-black py-2 opacity-60 w-72 md:w-96 md:w-96 rounded-lg shadow-lg shadow-cyan-500/50 duration-200',
-        linkCl: 'block w-full h-full linkcl duration-500 md:text-sm txs text-white md:text-gray-900 text-center font-bold'
+        linkCl: 'block w-full h-full linkcl duration-500 md:text-sm txs text-white md:text-gray-900 text-center font-bold',
+        info: 'hidden'
       }
     })
   }
 
   return (
     <>
-        <div className="bg-gradient-to-r from-violet-900 to-fuchsia-900 w-full h-full">
-          <div className="absolute left-4 top-4">
-            <img src="images/logo.png" className="w-52" />
-            <div className="sm:block hidden">
-              <h1 className="text-3xl text-white mt-2 mx-5">Take your business online. We are there for you.</h1>
-              <p className="text-white font-bold mt-2 mx-5">Explore our services. Click the box below.</p>
-            </div>
+      <div className="bg-gradient-to-r from-violet-900 to-fuchsia-900 w-full h-full">
+        <div className="absolute left-4 top-4">
+          <img src="images/logo.png" className="w-52" />
+          <div className="sm:block hidden">
+            <h1 className="text-3xl text-white mt-2">Take your business online. We are there for you.</h1>
+            <p className={info}>Explore our services. Click the box at the centre.</p>
           </div>
-          <div className="flex items-center justify-center h-screen">
-            <div className={box} onClick={expand}>
-              <div className={ocs}>
-                <div className={cls1}><a href='/' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />E-commerce website</a></div>
-                <div className={cls2}><a href='/' className={linkCl}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />LMS/CRM portal</a></div>
-                <div className={cls3}><a href='/' className={linkCl}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Informative website</a></div>
-              </div>
-              <div className={ocs}>
-                <div className={cls4}><a href='/' className={linkCl}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Blog/ E-magazine</a></div>
-                <div className={cls5}><a href='/' className={linkCl}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Any Other Website</a></div>
-                <div className={cls6}><a href='/' className={linkCl}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Mobile Application</a></div>
-              </div>
-              <div className={ocs}>
-                <div className={cls7}><a href='/' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />About Aarooshi</a></div>
-                <div className={cls8}><a href='/' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Get In Touch</a></div>
-                <div className={cls9}><a href='/' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Aarooshi Blog</a></div>
-              </div>
+        </div>
+        <div className="flex items-center justify-center h-screen">
+          <div className={box} onClick={expand}>
+            <div className={ocs}>
+              <div className={cls1}><a href='/ecommerce-website' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />E-commerce website</a></div>
+              <div className={cls2}><a href='/' className={linkCl}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />LMS/CRM portal</a></div>
+              <div className={cls3}><a href='/' className={linkCl}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Informative website</a></div>
+            </div>
+            <div className={ocs}>
+              <div className={cls4}><a href='/' className={linkCl}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Blog/ E-magazine</a></div>
+              <div className={cls5}><a href='/' className={linkCl}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Any Other Website</a></div>
+              <div className={cls6}><a href='/' className={linkCl}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Mobile Application</a></div>
+            </div>
+            <div className={ocs}>
+              <div className={cls7}><a href='/' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />About Aarooshi</a></div>
+              <div className={cls8}><a href='/' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Get In Touch</a></div>
+              <div className={cls9}><a href='/' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Aarooshi Blog</a></div>
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 }
