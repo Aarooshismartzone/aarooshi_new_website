@@ -12,15 +12,15 @@ export default function Home() {
 
   const [value, newValue] = useState({
     //put all the classes of the elements where classes will change. Include even those classes that won't change
-    cls1: 'h-4 w-4 bg-gray-600',
-    cls2: 'h-4 w-4 bg-gray-600',
-    cls3: 'h-4 w-4 bg-gray-600',
-    cls4: 'h-4 w-4 bg-gray-600',
-    cls5: 'h-4 w-4 bg-gray-600',
-    cls6: 'h-4 w-4 bg-gray-600',
-    cls7: 'h-4 w-4 bg-gray-600',
-    cls8: 'h-4 w-4 bg-gray-600',
-    cls9: 'h-4 w-4 bg-gray-600',
+    cls1: 'h-4 w-4 bg-yellow-300',
+    cls2: 'h-4 w-4 bg-green-300',
+    cls3: 'h-4 w-4 bg-blue-300',
+    cls4: 'h-4 w-4 bg-pink-300',
+    cls5: 'h-4 w-4 bg-sky-300',
+    cls6: 'h-4 w-4 bg-amber-300',
+    cls7: 'h-4 w-4 bg-fuchsia-300',
+    cls8: 'h-4 w-4 bg-zinc-300',
+    cls9: 'h-4 w-4 bg-lime-300',
     ocs: 'flex gap-4 justify-between p-2',
     box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50',
     linkCl: 'hidden',
@@ -76,19 +76,19 @@ export default function Home() {
         <div className="flex items-center justify-center h-screen">
           <div className={box} onClick={expand}>
             <div className={ocs}>
-              <div className={cls1}><a href='/ecommerce-website' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />E-commerce website</a></div>
-              <div className={cls2}><a href='/' className={linkCl}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />LMS/CRM portal</a></div>
-              <div className={cls3}><a href='/' className={linkCl}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Informative website</a></div>
+              <div className={cls1}><a href='/e-commerce-website' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
+              <div className={cls2}><a href='/lms-crm-portal' className={linkCl}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-green-300 md:text-green-600" />LMS/CRM portal</a></div>
+              <div className={cls3}><a href='/informative-website' className={linkCl}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-blue-300 md:text-blue-600" />Informative website</a></div>
             </div>
             <div className={ocs}>
-              <div className={cls4}><a href='/' className={linkCl}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Blog/ E-magazine</a></div>
-              <div className={cls5}><a href='/' className={linkCl}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Any Other Website</a></div>
-              <div className={cls6}><a href='/' className={linkCl}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Mobile Application</a></div>
+              <div className={cls4}><a href='/blog-e-magazine' className={linkCl}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-pink-300 md:text-pink-600" />Blog/ E-magazine</a></div>
+              <div className={cls5}><a href='/other-websites' className={linkCl}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-sky-300 md:text-sky-600" />Any Other Website</a></div>
+              <div className={cls6}><a href='/mobile-application' className={linkCl}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-amber-300 md:text-amber-600" />Mobile Application</a></div>
             </div>
             <div className={ocs}>
-              <div className={cls7}><a href='/' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />About Aarooshi</a></div>
-              <div className={cls8}><a href='/' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Get In Touch</a></div>
-              <div className={cls9}><a href='/' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-white md:text-fuchsia-800" />Aarooshi Blog</a></div>
+              <div className={cls7}><a href='/about-us' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
+              <div className={cls8}><a href='/' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
+              <div className={cls9}><a href='/' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
             </div>
           </div>
         </div>
