@@ -22,10 +22,10 @@ export default function Page({ params }: { params: { service: string } }) {
                         <Topbar name={s.title} />
                         <div className='belowtopbar'>
                             <Topiclist />
-                            <Herosection title={s.title} para1={s.para1} para2={s.para2}/>
+                            <Herosection title={s.title} para1={s.para1} para2={s.para2} slug={s.slug} formresponse={s.formresponse}/>
                         </div>
                         <div className='md:hidden block'>
-                            <Herosection title={s.title} para1={s.para1} para2={s.para2}/>
+                            <Herosection title={s.title} para1={s.para1} para2={s.para2} formresponse={s.formresponse}/>
                         </div>
                     </>
                 )

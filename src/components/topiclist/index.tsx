@@ -24,7 +24,7 @@ export default function Topiclist() {
                 </div>
                 <div className='mt-4'>
                     <Buttoncard title="About Aarooshi" stc={<RiFileInfoFill />} href="/about-us" />
-                    <Buttoncard title="Get In Touch" stc={<GiLetterBomb />} href="#" />
+                    <Buttoncard title="Get In Touch" stc={<GiLetterBomb />} href="/get-in-touch" />
                     <Buttoncard title="Aarooshi Blog" stc={<IoReader />} href="#" />
                 </div>
             </div>

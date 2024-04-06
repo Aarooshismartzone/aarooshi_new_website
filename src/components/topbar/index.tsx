@@ -66,7 +66,7 @@ const DrawerList = (
                 <Buttoncd title="Any Other Website" stc={<MdOutlineWeb />} href="/other-websites" />
                 <Buttoncd title="Mobile Application" stc={<MdOutlineAppShortcut />} href="/mobile-application" />
                 <Buttoncd title="About Aarooshi" stc={<RiFileInfoFill />} href="/about-us" />
-                <Buttoncd title="Get In Touch" stc={<GiLetterBomb />} href="#" />
+                <Buttoncd title="Get In Touch" stc={<GiLetterBomb />} href="/get-in-touch" />
                 <Buttoncd title="Aarooshi Blog" stc={<IoReader />} href="#" />
             </div>
         </div>
