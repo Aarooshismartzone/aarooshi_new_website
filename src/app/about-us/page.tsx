@@ -6,19 +6,20 @@ import Topiclist from '@/components/topiclist';
 import About from '@/components/herosections/about';
 
 
-
-export default function Page() {  
+export default function Page() {
 
     return (
         <>
-            <Topbar name="About Aarooshi" />
-            <div className='belowtopbar'>
-                <Topiclist />
-                <About />
-            </div>
-            <div className='md:hidden block'>
-            <About />
-            </div>
+            <main>
+                <Topbar name="About Aarooshi" />
+                <div className='belowtopbar'>
+                    <Topiclist />
+                    <About />
+                </div>
+                <div className='md:hidden block'>
+                    <About />
+                </div>
+            </main>
         </>
     );
 }

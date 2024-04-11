@@ -33,7 +33,7 @@ export default function Topbar(title: any) {
                     </div>
                 </div>
                 <div className='md:hidden flex justify-between text-white'>
-                    <img src="images/logo.png" className="sm:w-28 w-20 p-0" />
+                    <img src="images/logo.png" className="sm:w-28 w-20 p-0" alt='Aarooshi' />
                     <FaHamburger onClick={toggleDrawer(true)} />
                 </div>
                 <Drawer open={open} onClose={toggleDrawer(false)}>
@@ -67,7 +67,7 @@ const DrawerList = (
                 <Buttoncd title="Mobile Application" stc={<MdOutlineAppShortcut />} href="/mobile-application" />
                 <Buttoncd title="About Aarooshi" stc={<RiFileInfoFill />} href="/about-us" />
                 <Buttoncd title="Get In Touch" stc={<GiLetterBomb />} href="/get-in-touch" />
-                <Buttoncd title="Aarooshi Blog" stc={<IoReader />} href="#" />
+                <Buttoncd title="Aarooshi Blog" stc={<IoReader />} href="/blog" />
             </div>
         </div>
     </>

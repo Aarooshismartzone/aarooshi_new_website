@@ -5,20 +5,21 @@ import Topbar from '@/components/topbar';
 import Topiclist from '@/components/topiclist';
 import { Service } from '../info';
 import Herosection from '@/components/herosections';
-//import { Textarea, Button, Link, Input } from '@nextui-org/react'
-//import Ecommerce from '@/components/herosections/ecommerce';
+import { usePathname } from 'next/navigation';
 
+export const Pathname = {usePathname}
+console.log(Pathname)
 
 export default function Page({ params }: { params: { service: string } }) {
 
     const serv = Service.filter(u => u.slug === params.service)
-    console.log(serv)
 
     return (
         <>
             {serv.map((s) => {
                 return (
                     <>
+                    <title>{s.title}</title>
                         <Topbar name={s.title} />
                         <div className='belowtopbar'>
                             <Topiclist />
@@ -33,3 +34,5 @@ export default function Page({ params }: { params: { service: string } }) {
         </>
     );
 }
+
+

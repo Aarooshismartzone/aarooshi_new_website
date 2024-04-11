@@ -1,4 +1,5 @@
 "use client"
+import Head from 'next/head';
 import React, { useState } from 'react'
 import { BsInfoSquareFill } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
@@ -88,7 +89,7 @@ export default function Home() {
             <div className={ocs}>
               <div className={cls7}><a href='/about-us' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
               <div className={cls8}><a href='/get-in-touch' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
-              <div className={cls9}><a href='/' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
+              <div className={cls9}><a href='/blog' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
             </div>
           </div>
         </div>
