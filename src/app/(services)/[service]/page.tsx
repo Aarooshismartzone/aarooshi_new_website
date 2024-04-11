@@ -5,10 +5,6 @@ import Topbar from '@/components/topbar';
 import Topiclist from '@/components/topiclist';
 import { Service } from '../info';
 import Herosection from '@/components/herosections';
-import { usePathname } from 'next/navigation';
-
-export const Pathname = {usePathname}
-console.log(Pathname)
 
 export default function Page({ params }: { params: { service: string } }) {
 
