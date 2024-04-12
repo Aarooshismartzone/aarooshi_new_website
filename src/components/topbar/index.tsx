@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { GiMoonClaws } from "react-icons/gi";
 import './style.scss'
 import { Button, Link, Switch } from '@nextui-org/react';
+import Image from 'next/image';
 import { FaHamburger, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsInfoSquareFill, BsTwitterX } from 'react-icons/bs';
 import Drawer from '@mui/material/Drawer';
@@ -24,7 +25,7 @@ export default function Topbar(title: any) {
         <>
             <div className='top-class'>
                 <div className='md:flex justify-between text-white hidden'>
-                    <img src="images/logo.png" className="w-36 p-0" />
+                    <Image src="images/logo.png" className="w-36 p-0" alt="Aarooshi" />
                     <p className='text-xl font-bold uppercase'>{title.name}</p>
                     <div className='flex justify-evenly w-40 mt-2'>
                         <FaInstagramSquare />
@@ -33,7 +34,7 @@ export default function Topbar(title: any) {
                     </div>
                 </div>
                 <div className='md:hidden flex justify-between text-white'>
-                    <img src="images/logo.png" className="sm:w-28 w-20 p-0" alt='Aarooshi' />
+                    <Image src="images/logo.png" className="sm:w-28 w-20 p-0" alt='Aarooshi' />
                     <FaHamburger onClick={toggleDrawer(true)} />
                 </div>
                 <Drawer open={open} onClose={toggleDrawer(false)}>

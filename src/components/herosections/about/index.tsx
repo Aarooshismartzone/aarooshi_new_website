@@ -15,7 +15,7 @@ export default function About() {
                     types of businesses, and thus aim to create the best website suited for a particular
                     type of business. When a person or a team decides to open a business- be it a startup or some regular business,
                     they take a huge risk just to fulfill a dream. They invest a good amount of money and time for this purpose. At Aarooshi,
-                    we understand the importance of a client's dream and the fact that their business does matter. Their business
+                    we understand the importance of a client&apos;s dream and the fact that their business does matter. Their business
                     matters to us, to the customers, and to the society and economy as a whole. So, we take extra
                     care while weaving their websites and mobile applications.
                     We have collaborated with an SEO team that takes care of the marketing part.</p>
@@ -29,8 +29,8 @@ export default function About() {
                                 <CardBody>
                                     At Aarooshi, our mission is to empower businesses of all sizes to thrive in the digital age. We
                                     believe that every company deserves a strong online presence and cutting-edge technology to succeed
-                                    in today's competitive market. Our goal is to provide top-notch website and app development services
-                                    tailored to our clients' unique needs, helping them achieve their objectives and exceed their expectations.
+                                    in today&apos;s competitive market. Our goal is to provide top-notch website and app development services
+                                    tailored to our clients&apos; unique needs, helping them achieve their objectives and exceed their expectations.
                                 </CardBody>
                             </Card>
                         </Tab>

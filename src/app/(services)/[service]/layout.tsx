@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import Page, { Pathname } from "./page";
-import { Service } from '../info';
+import Page from "./page";
 
 
 export const metadata: Metadata = {

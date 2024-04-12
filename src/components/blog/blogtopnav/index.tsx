@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { CategoryData } from '../data';
 
@@ -18,14 +19,14 @@ export default function BlogTopNav() {
                         className="sm:hidden mt-0"
                     />
                     <NavbarBrand>
-                        <img src='images/logo.png' className='w-40' />
+                    <Image src="images/logo.png" className='w-52' alt='Aarooshi' />
                     </NavbarBrand>
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {cats.map((item) => {
+                    {cats.map((item, index) => {
                         return (
-                            <NavbarItem>
+                            <NavbarItem key={index}>
                                 <Link className='text-white' color="foreground" href="#">
                                     {item.name}
                                 </Link>
