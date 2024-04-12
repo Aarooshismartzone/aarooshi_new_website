@@ -3,6 +3,8 @@ import React from 'react'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { CategoryData } from '../data';
+import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import { BsTwitterX } from 'react-icons/bs';
 
 export default function BlogTopNav() {
 
@@ -37,14 +39,11 @@ export default function BlogTopNav() {
 
                 </NavbarContent>
                 <NavbarContent justify="end">
-                    <NavbarItem className="hidden lg:flex">
-                        <Link href="#">Login</Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Button as={Link} color="primary" href="#" variant="flat">
-                            Sign Up
-                        </Button>
-                    </NavbarItem>
+                <div className='flex justify-evenly w-40 mt-2'>
+                        <FaInstagramSquare />
+                        <BsTwitterX />
+                        <FaLinkedin />
+                    </div>
                 </NavbarContent>
                 <NavbarMenu>
                     {cats.map((item, index) => (
