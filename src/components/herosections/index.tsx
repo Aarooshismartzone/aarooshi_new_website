@@ -75,7 +75,7 @@ export default function Herosection(props: any) {
 
                 {submissionStatus === 'success' ? (
                     <>
-                        <p className='mt-3 mb-3 text-2xl text-blue-300'>{props.formresponse}</p>
+                        <p className='mt-3 mb-3 lg:text-2xl md:text-xl text-lg text-blue-300'>{props.formresponse}</p>
                     </>
                 ) : (
                     <>
