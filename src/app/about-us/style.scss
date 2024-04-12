@@ -1,5 +1,5 @@
 .bgdd {
-    @apply col-span-4;
+    @apply col-span-4 min-h-[calc(100%-47.78px)];
     background-image: url('../../../public/images/background.jpg');
     background-size: cover;
     background-attachment: fixed;
