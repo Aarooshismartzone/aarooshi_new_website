@@ -66,8 +66,8 @@ export default function Herosection(props: any) {
     return (
         <div className='bgdd'>
             <div className="hero-section">
-                <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg'>{props.title}</h1>
-                <div className='mt-4'>
+                <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1>
+                <div className='mt-4 text-xs md:text-sm'>
                     <p>{props.para1}</p>
 
                     <p className='mt-2'>{props.para2}</p>

@@ -35,7 +35,7 @@ export default function About() {
                             </Card>
                         </Tab>
                         <Tab key="distinction" title="What sets us apart">
-                            <div className='grid grid-cols-4 gap-2'>
+                            <div className='grid lg:grid-cols-4 md:col-span-2 col-span-1 gap-2'>
                                 <div className='col-span-1'>
                                     <Card className='bg-transparent border-purple-300 text-purple-300 border-2'>
                                         <CardBody className='text-center'>
