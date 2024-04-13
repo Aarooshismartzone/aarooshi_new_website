@@ -1,4 +1,5 @@
 "use client"
+import { Spinner } from '@nextui-org/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react'
@@ -12,6 +13,7 @@ import { RiFileInfoFill } from "react-icons/ri";
 
 export default function Home() {
 
+  const [loading, setLoading] = useState<boolean>(false)
   const [value, newValue] = useState({
     //put all the classes of the elements where classes will change. Include even those classes that won't change
     cls1: 'h-4 w-4 bg-yellow-300',
@@ -65,6 +67,10 @@ export default function Home() {
     })
   }
 
+  const loadit = () => {
+    setLoading(!loading);
+  }
+
   return (
     <>
       <div className="bg-gradient-to-r from-violet-900 to-fuchsia-900 w-full h-full">
@@ -76,6 +82,9 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center justify-center h-screen">
+          {loading ? (
+            <Spinner label="Loading..." color="secondary" labelColor="secondary"/>
+          ) : (
           <div className={box} onClick={expand}>
             <div className={ocs}>
               <div className={cls1}><a href='/e-commerce-website' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
@@ -93,6 +102,7 @@ export default function Home() {
               <div className={cls9}><a href='/blog' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
             </div>
           </div>
+          )}
         </div>
       </div>
     </>
