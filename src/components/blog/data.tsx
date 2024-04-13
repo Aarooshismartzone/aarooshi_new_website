@@ -12,7 +12,7 @@ export const CategoryData = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://internal.aarooshi.com/api/getblogcategories');
+                const response = await fetch('https://busytiger.com/api/getblogcategories');
                 const jsonData = await response.json();
                 setData(jsonData);
             } catch (error) {

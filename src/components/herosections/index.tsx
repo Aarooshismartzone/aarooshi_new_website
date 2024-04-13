@@ -39,7 +39,7 @@ export default function Herosection(props: any) {
             })
             console.log(formObject)
 
-            const response = await fetch('https://internal.aarooshi.com/api/submitleadentry', { 
+            const response = await fetch('https://busytiger.com/api/submitleadentry', { 
                 method: 'POST',
                 body: formData,
             });
