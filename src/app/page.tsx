@@ -87,19 +87,19 @@ export default function Home() {
           ) : (
           <div className={box} onClick={expand}>
             <div className={ocs}>
-              <div className={cls1}><a href='/e-commerce-website' className={linkCl}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
-              <div className={cls2}><a href='/lms-crm-portal' className={linkCl}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-green-300 md:text-green-600" />LMS/CRM portal</a></div>
-              <div className={cls3}><a href='/informative-website' className={linkCl}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-blue-300 md:text-blue-600" />Informative website</a></div>
+              <div className={cls1}><a href='/e-commerce-website' className={linkCl} onClick={loadit}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
+              <div className={cls2}><a href='/lms-crm-portal' className={linkCl} onClick={loadit}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-green-300 md:text-green-600" />LMS/CRM portal</a></div>
+              <div className={cls3}><a href='/informative-website' className={linkCl} onClick={loadit}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-blue-300 md:text-blue-600" />Informative website</a></div>
             </div>
             <div className={ocs}>
-              <div className={cls4}><a href='/blog-e-magazine' className={linkCl}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-pink-300 md:text-pink-600" />Blog/ E-magazine</a></div>
-              <div className={cls5}><a href='/other-websites' className={linkCl}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-sky-300 md:text-sky-600" />Any Other Website</a></div>
-              <div className={cls6}><a href='/mobile-application' className={linkCl}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-amber-300 md:text-amber-600" />Mobile Application</a></div>
+              <div className={cls4}><a href='/blog-e-magazine' className={linkCl} onClick={loadit}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-pink-300 md:text-pink-600" />Blog/ E-magazine</a></div>
+              <div className={cls5}><a href='/other-websites' className={linkCl} onClick={loadit}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-sky-300 md:text-sky-600" />Any Other Website</a></div>
+              <div className={cls6}><a href='/mobile-application' className={linkCl} onClick={loadit}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-amber-300 md:text-amber-600" />Mobile Application</a></div>
             </div>
             <div className={ocs}>
-              <div className={cls7}><a href='/about-us' className={linkCl}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
-              <div className={cls8}><a href='/get-in-touch' className={linkCl}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
-              <div className={cls9}><a href='/blog' className={linkCl}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
+              <div className={cls7}><a href='/about-us' className={linkCl} onClick={loadit}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
+              <div className={cls8}><a href='/get-in-touch' className={linkCl} onClick={loadit}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
+              <div className={cls9}><a href='/blog' className={linkCl} onClick={loadit}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
             </div>
           </div>
           )}
