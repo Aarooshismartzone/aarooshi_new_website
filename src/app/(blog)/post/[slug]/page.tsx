@@ -2,7 +2,6 @@
 import BlogTopNav from '@/components/blog/blogtopnav'
 import { PostData } from '@/components/blog/data'
 import { Image } from "@nextui-org/react";
-import styles from './styles/style.module.scss'
 import React from 'react'
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -23,8 +22,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                             <div className='lg:mx-40 md:mx-20 mx-10 lg:py-24 md:py-16 py-8'>
 
                                 <Image src={'/images/blog/' + p.image} alt='Aarooshi Blog' className='float-left mr-3 mb-2 md:w-80 w-full' />
-                                <h1 className='md:text-4xl text:3xl'>{p.title}</h1>
-                                <p className='font-bold'>{p.date}</p>
+                                <h1 className='md:text-4xl text-3xl tracking-wider uppercase font-bold text-purple-200'>{p.title}</h1>
+                                <p className='font-bold italic mt-2'>{p.date}</p>
                                 <div className='mt-3 text-justify'>
                                     <div dangerouslySetInnerHTML={{ __html: p.content }} />
                                 </div>
