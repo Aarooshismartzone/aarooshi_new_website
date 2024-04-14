@@ -29,9 +29,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                                     <div dangerouslySetInnerHTML={{ __html: p.content }} />
                                 </div>
                                 <p className='mt-4 italic'><b>Tags: </b>{p.tags}</p>
-                                <div className='flex md:flex-row flex-col justify-between mt-5'>
+                                <div className='flex md:flex-row flex-col justify-between mt-5 text-blue-300 font-bold'>
                                     <Link href='/blog'>Back to blog list</Link>
-                                    <Link href='/'>Check main site</Link>
+                                    <Link href='/' className='md:mt-0 mt-3'>Check main site</Link>
                                 </div>
                             </div>
                         </div>
