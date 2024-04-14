@@ -11,7 +11,7 @@ const posts = PostData()
 
     return (
         <>
-            <div className='bg-gray-800 text-white h-lvh'>
+            <div className='bg-gray-800 text-white min-h-lvh'>
             <BlogTopNav />
                 <Anim />
                 {posts.map((p) => {
