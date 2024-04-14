@@ -5,6 +5,7 @@ import BlogTopNav from '@/components/blog/blogtopnav'
 import { PostData } from '@/components/blog/data'
 import { Card, CardFooter, Image } from "@nextui-org/react";
 import Link from 'next/link'
+import Blogcard from '@/components/blog/blogcard'
 
 
 export default function page() {
@@ -16,33 +17,19 @@ export default function page() {
             <div className='bg-gray-800 text-white min-h-lvh'>
                 <BlogTopNav />
                 <Anim />
-                <div className='grid grid-col lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
-                    {posts.map((p) => {
-                        return (
-                            <>
-                                <div className='col-span-1'>
-                                    <Link href={'/post/' + p.slug}>
-                                        <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
-                                            <Image
-                                                removeWrapper
-                                                isZoomed
-                                                alt="Aarooshi"
-                                                className="z-0 w-full h-full object-cover"
-                                                src={"/images/blog/" + p.image}
-                                            />
-                                            <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100">
-
-                                                <div className="flex flex-col">
-                                                    <p className="text-tiny text-white/60 uppercase font-bold">{p.readable_mins}-MINUTE READ</p>
-                                                    <h4 className="text-white/90 font-medium text-xl">{p.title}</h4>
-                                                </div>
-                                            </CardFooter>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            </>
-                        )
-                    })}
+                <div className='lg:mx-40 md:mx-20 mx-10'>
+                    <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>
+                    <div className='grid grid-col lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
+                        {posts.map((p) => {
+                            return (
+                                <>
+                                    <div className='col-span-1'>
+                                        <Blogcard slug={p.slug} title={p.title} readable_mins={p.readable_mins} image={p.image} />
+                                    </div>
+                                </>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </>
@@ -60,3 +47,4 @@ const Anim: React.FC = () => {
         </>
     )
 }
+
