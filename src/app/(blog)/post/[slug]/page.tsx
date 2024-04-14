@@ -1,3 +1,4 @@
+'use client'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import { PostData } from '@/components/blog/data'
 import { Image } from "@nextui-org/react";
