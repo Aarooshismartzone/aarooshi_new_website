@@ -20,7 +20,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <meta name='keywords' content={p.keywords} />
                         <div className='bg-gray-800 text-white'>
                             <BlogTopNav />
-                            <div className='lg:mx-40 md:mx-20 mx-10 lg:my-24 md:my-16 my-8'>
+                            <div className='lg:mx-40 md:mx-20 mx-10 lg:py-24 md:py-16 py-8'>
 
                                 <Image src={'/images/blog/' + p.image} alt='Aarooshi Blog' className='float-left mr-3 mb-2 md:w-80 w-full' />
                                 <h1 className='md:text-4xl text:3xl'>{p.title}</h1>
