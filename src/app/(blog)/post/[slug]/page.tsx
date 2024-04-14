@@ -18,7 +18,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <title>Aarooshi - {p.title}</title>
                         <meta name='description' content={p.description} />
                         <meta name='keywords' content={p.keywords} />
-                        <div className='bg-gray-800 text-white min-h-lvh'>
+                        <div className='bg-gray-800 text-white'>
                             <BlogTopNav />
                             <div className='lg:mx-40 md:mx-20 mx-10 lg:my-24 md:my-16 my-8'>
 
