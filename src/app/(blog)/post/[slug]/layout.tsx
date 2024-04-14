@@ -3,7 +3,6 @@ import Page from "./page";
 
 
 export const metadata: Metadata = {
-  title: "",
   description: ""
 };
 
