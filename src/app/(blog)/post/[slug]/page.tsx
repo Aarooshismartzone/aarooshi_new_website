@@ -22,7 +22,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                             <BlogTopNav />
                             <div className='lg:mx-40 md:mx-20 mx-10 lg:my-24 md:my-16 my-8'>
 
-                                <Image src={'images/blog/' + p.image} className='float-left mr-2 mb-2 md:w-56 w-full' />
+                                <Image src={'/images/blog/' + p.image} alt='Aarooshi Blog' className='float-left mr-2 mb-2 md:w-56 w-full' />
                                 <h1 className='md:text-4xl text:3xl'>{p.title}</h1>
                                 <p className='font-bold'>{p.date}</p>
                                 <div className='mt-3 text-justify'>
