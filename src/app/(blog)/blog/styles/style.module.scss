@@ -10,7 +10,8 @@
 }
 
 .text {
-    font-size: 4rem;
+    @apply lg:text-6xl md:text-5xl text-4xl;
+    
     color: #e2debf;
     /* White text color */
     text-align: center;
