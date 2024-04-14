@@ -18,7 +18,7 @@ const posts = PostData()
                     return (
                         <>
                         {p.title}<br/>
-                        {p.content}
+                        <div dangerouslySetInnerHTML={{__html: p.content}} />
                         </>
                     )
                 })}
