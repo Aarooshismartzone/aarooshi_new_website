@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { CategoryType, getStaticProps } from '../data';
@@ -16,7 +16,7 @@ export default function BlogTopNav({ categories }: Props) {
 
     return (
         <>
-            <Navbar onMenuOpenChange={setIsMenuOpen} className=' bg-gray-900' maxWidth='full'>
+            <Navbar onMenuOpenChange={setIsMenuOpen} className='bg-gray-900' maxWidth='full'>
                 <NavbarContent>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -28,8 +28,8 @@ export default function BlogTopNav({ categories }: Props) {
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {categories.map((item, index) => (
-                        <NavbarItem key={index}>
+                    {categories.map((item) => (
+                        <NavbarItem key={item.id}>
                             <Link className='text-white' color="foreground" href="#">
                                 {item.name}
                             </Link>
@@ -46,12 +46,10 @@ export default function BlogTopNav({ categories }: Props) {
                 </NavbarContent>
 
                 <NavbarMenu>
-                    {categories.map((item, index) => (
-                        <NavbarMenuItem key={`${item}-${index}`}>
+                    {categories.map((item) => (
+                        <NavbarMenuItem key={item.id}>
                             <Link
-                                color={
-                                    index === 2 ? "primary" : index === categories.length - 1 ? "danger" : "foreground"
-                                }
+                                color="foreground"
                                 className="w-full"
                                 href="#"
                                 size="lg"
@@ -66,3 +64,4 @@ export default function BlogTopNav({ categories }: Props) {
     );
 }
 
+export { getStaticProps };
