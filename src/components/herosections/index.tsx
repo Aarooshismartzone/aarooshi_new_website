@@ -33,12 +33,12 @@ export default function Herosection(props: any) {
             const formData = new FormData(event.currentTarget);
             //console.log(formData);
 
-            const formObject: { [key: string]: string } = {}
+            // const formObject: { [key: string]: string } = {}
 
-            formData.forEach((value, key) => {
-                formObject[key] = value.toString()
-            })
-            console.log(formObject)
+            // formData.forEach((value, key) => {
+            //     formObject[key] = value.toString()
+            // })
+            // console.log(formObject)
 
             const response = await fetch('https://busytiger.com/api/submitleadentry', { 
                 method: 'POST',
@@ -48,7 +48,7 @@ export default function Herosection(props: any) {
             if (response.ok) {
                 setSubmissionStatus('success');
             } else {
-                setSubmissionStatus('failure');
+                throw new Error('Failed to submit form');
             }
 
             // Handle response if necessary
