@@ -19,7 +19,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <React.Fragment key={s.slug}>
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
-                    <div className='md:block hidden'>
+                    <div className='md:hidden block'>
                         <Herosection
                             title={s.title}
                             para1={s.para1}
