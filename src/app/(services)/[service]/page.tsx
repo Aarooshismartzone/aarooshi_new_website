@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useEffect, useState } from 'react';
 import '../style.scss';
 import Topbar from '@/components/topbar';
@@ -6,21 +6,22 @@ import Topiclist from '@/components/topiclist';
 import { Service } from '../info';
 import Herosection from '@/components/herosections';
 
-export default function Page({ params }: { params: { service: string } }) {
-    const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+interface PageProps {
+    params: { service: string };
+}
+
+const Page: React.FC<PageProps> = ({ params }) => {
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
-        // Check screen width on component mount
         const checkScreenSize = () => {
             setIsSmallScreen(window.innerWidth < 768);
         };
 
         checkScreenSize();
 
-        // Event listener to update screen size state on window resize
         window.addEventListener('resize', checkScreenSize);
 
-        // Cleanup event listener on component unmount
         return () => window.removeEventListener('resize', checkScreenSize);
     }, []);
 
@@ -44,4 +45,6 @@ export default function Page({ params }: { params: { service: string } }) {
             ))}
         </>
     );
-}
+};
+
+export default Page;
