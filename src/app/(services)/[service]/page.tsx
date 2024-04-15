@@ -34,14 +34,14 @@ const Page: React.FC<PageProps> = ({ params }) => {
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
                     {/* {isSmallScreen ? ( */}
-                        <Herosection
+                        {/* <Herosection
                             title={s.title}
                             para1={s.para1}
                             para2={s.para2}
                             formresponse={s.formresponse}
-                        />
+                        /> */}
                     {/* ) : ( */}
-                        {/* <div className='belowtopbar md:block hidden'>
+                        <div className='belowtopbar md:block hidden'>
                             <Topiclist />
                             <Herosection
                                 title={s.title}
@@ -51,7 +51,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                                 formresponse={s.formresponse}
                             />
                         </div>
-                    )} */}
+                    {/* )} */}
                 </React.Fragment>
             ))}
         </>
