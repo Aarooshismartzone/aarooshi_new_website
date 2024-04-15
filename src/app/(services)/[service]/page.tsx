@@ -41,15 +41,15 @@ const Page: React.FC<PageProps> = ({ params }) => {
                             formresponse={s.formresponse}
                         />
                     ) : (
-                        <div className='belowtopbar'>
+                        <div className='belowtopbar md:block hidden'>
                             <Topiclist />
-                            {/* <Herosection
+                            <Herosection
                                 title={s.title}
                                 para1={s.para1}
                                 para2={s.para2}
                                 slug={s.slug}
                                 formresponse={s.formresponse}
-                            /> */}
+                            />
                         </div>
                     )}
                 </React.Fragment>
