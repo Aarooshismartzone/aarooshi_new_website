@@ -35,7 +35,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                     <Topbar name={s.title} />
                     {isSmallScreen ? (
                     <>
-                    <Topiclist />
+              
                         <Herosection
                             title={s.title}
                             para1={s.para1}
@@ -45,7 +45,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                         </>
                     ) : (
                         <div className='belowtopbar'>
-                            <Topiclist />
+
                             <Herosection
                                 title={s.title}
                                 para1={s.para1}
