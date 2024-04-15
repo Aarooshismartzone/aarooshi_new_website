@@ -13,7 +13,7 @@ export default function page() {
     return (
         <>
             <div className='bg-gray-800 text-white min-h-lvh'>
-                <BlogTopNav />
+                <BlogTopNav categories={[]} />
                 <Anim />
                 <div className='lg:mx-40 md:mx-20 mx-10'>
                     <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardFooter, Image } from "@nextui-org/react";
 import Link from 'next/link';
 
-export default function Blogcard(post:any) {
+export default function Blogcard(post: any) {
     return (
         <Link href={'/post/' + post.slug}>
             <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
