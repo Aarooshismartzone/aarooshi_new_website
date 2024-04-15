@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style.scss';
 import Topbar from '@/components/topbar';
 import Topiclist from '@/components/topiclist';
@@ -11,22 +11,6 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ params }) => {
-    useEffect(() => {
-        const checkScreenSize = () => {
-            const isSmallScreen = window.innerWidth < 768;
-            const elements = document.getElementsByClassName('belowtopbar') as HTMLCollectionOf<HTMLElement>;
-            for (let i = 0; i < elements.length; i++) {
-                elements[i].style.display = isSmallScreen ? 'none' : 'block';
-            }
-        };
-
-        checkScreenSize();
-
-        window.addEventListener('resize', checkScreenSize);
-
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
     const serv = Service.filter(u => u.slug === params.service);
 
     return (
@@ -35,6 +19,14 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <React.Fragment key={s.slug}>
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
+                    <div className='md:block hidden'>
+                        <Herosection
+                            title={s.title}
+                            para1={s.para1}
+                            para2={s.para2}
+                            formresponse={s.formresponse}
+                        />
+                    </div>
                     <div className='belowtopbar'>
                         <Topiclist />
                         <Herosection

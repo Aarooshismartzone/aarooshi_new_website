@@ -10,5 +10,5 @@
 }
 
 .belowtopbar {
-    @apply md:grid lg:grid-cols-5 grid-cols-4 grid-flow-col z-0 min-h-[calc(100vh_-_47.78px)]
+    @apply md:grid lg:grid-cols-5 grid-cols-4 grid-flow-col z-0 hidden min-h-[calc(100vh_-_47.78px)]
 }

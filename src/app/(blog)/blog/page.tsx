@@ -1,10 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import { PostData } from '@/components/blog/data'
-import { Card, CardFooter, Image } from "@nextui-org/react";
-import Link from 'next/link'
 import Blogcard from '@/components/blog/blogcard'
 
 
