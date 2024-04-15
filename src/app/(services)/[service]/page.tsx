@@ -11,19 +11,19 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ params }) => {
-    // const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-    // useEffect(() => {
-    //     const checkScreenSize = () => {
-    //         setIsSmallScreen(window.innerWidth < 768);
-    //     };
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsSmallScreen(window.innerWidth < 768);
+        };
 
-    //     checkScreenSize();
+        checkScreenSize();
 
-    //     window.addEventListener('resize', checkScreenSize);
+        window.addEventListener('resize', checkScreenSize);
 
-    //     return () => window.removeEventListener('resize', checkScreenSize);
-    // }, []);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     const serv = Service.filter(u => u.slug === params.service);
 
@@ -33,15 +33,18 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <React.Fragment key={s.slug}>
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
-                    {/* {isSmallScreen ? ( */}
-                        {/* <Herosection
+                    {isSmallScreen ? (
+                    <>
+                    <Topiclist />
+                        <Herosection
                             title={s.title}
                             para1={s.para1}
                             para2={s.para2}
                             formresponse={s.formresponse}
-                        /> */}
-                    {/* ) : ( */}
-                        <div className='belowtopbar md:block hidden'>
+                        />
+                        </>
+                    ) : (
+                        <div className='belowtopbar'>
                             <Topiclist />
                             <Herosection
                                 title={s.title}
@@ -51,7 +54,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                                 formresponse={s.formresponse}
                             />
                         </div>
-                    {/* )} */}
+                    )}
                 </React.Fragment>
             ))}
         </>
