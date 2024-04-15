@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react';
 import '../style.scss';
 import Topbar from '@/components/topbar';
