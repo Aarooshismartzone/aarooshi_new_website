@@ -56,8 +56,9 @@ export default function GetInTouch() {
                             </div>
                         </div>
                     </div>
-                    <p className='text-xl mt-4 text-violet-300'>
-                        
+                    <p className='text-center md:text-2xl text-xl mt-4 text-violet-300'>
+                        Don't get lost amidst the crowd<br/>
+                        Make your business shout out loud.
                     </p>
                 </div>
             </div>
