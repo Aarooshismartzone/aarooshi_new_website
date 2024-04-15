@@ -1,27 +1,21 @@
 'use client'
-
 import React from 'react';
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { CategoryType, getStaticProps } from '../data';
+import { CategoryType } from '../data';
 
 interface Props {
     categories: CategoryType[];
 }
 
-export default function BlogTopNav({ categories }: Props) {
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
+const BlogTopNav: React.FC<Props> = ({ categories }) => {
     return (
         <>
-            <Navbar onMenuOpenChange={setIsMenuOpen} className='bg-gray-900' maxWidth='full'>
+            <Navbar className='bg-gray-900' maxWidth='full'>
                 <NavbarContent>
-                    <NavbarMenuToggle
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        className="sm:hidden mt-0"
-                    />
+                    <NavbarMenuToggle aria-label="Toggle menu" className="sm:hidden mt-0" />
                     <NavbarBrand>
                         <Link href='/'><Image src="images/logo.png" className='w-52' alt='Aarooshi' /></Link>
                     </NavbarBrand>
@@ -48,12 +42,7 @@ export default function BlogTopNav({ categories }: Props) {
                 <NavbarMenu>
                     {categories.map((item) => (
                         <NavbarMenuItem key={item.id}>
-                            <Link
-                                color="foreground"
-                                className="w-full"
-                                href="#"
-                                size="lg"
-                            >
+                            <Link color="foreground" className="w-full" href="#" size="lg">
                                 {item.name}
                             </Link>
                         </NavbarMenuItem>
@@ -64,4 +53,4 @@ export default function BlogTopNav({ categories }: Props) {
     );
 }
 
-export { getStaticProps };
+export default BlogTopNav;
