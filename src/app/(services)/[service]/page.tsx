@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../style.scss';
 import Topbar from '@/components/topbar';
 import Topiclist from '@/components/topiclist';
@@ -11,11 +11,13 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ params }) => {
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsSmallScreen(window.innerWidth < 768);
+            const isSmallScreen = window.innerWidth < 768;
+            const elements = document.getElementsByClassName('belowtopbar') as HTMLCollectionOf<HTMLElement>;
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = isSmallScreen ? 'none' : 'block';
+            }
         };
 
         checkScreenSize();
@@ -33,7 +35,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <React.Fragment key={s.slug}>
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
-                    {isSmallScreen ? (
+                    <div className='belowtopbar'>
+                        <Topiclist />
                         <Herosection
                             title={s.title}
                             para1={s.para1}
@@ -41,18 +44,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                             slug={s.slug}
                             formresponse={s.formresponse}
                         />
-                    ) : (
-                        <div className='belowtopbar'>
-                            <Topiclist />
-                            <Herosection
-                                title={s.title}
-                                para1={s.para1}
-                                para2={s.para2}
-                                slug={s.slug}
-                                formresponse={s.formresponse}
-                            />
-                        </div>
-                    )}
+                    </div>
                 </React.Fragment>
             ))}
         </>
