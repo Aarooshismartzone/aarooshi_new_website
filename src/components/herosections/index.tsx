@@ -7,6 +7,7 @@ export default function Herosection(props: any) {
 
     const [value, setValue] = useState('');
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [failure, setFailure] = useState<any>("")
     const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
 
     const handleChange = (e: any) => {
@@ -56,8 +57,9 @@ export default function Herosection(props: any) {
             // ...
         } catch (error) {
             // Handle error if necessary
-            console.error('error is: ' + error)
+            console.error('error is: ' + error);
             setSubmissionStatus('failure');
+            setFailure(error)
         } finally {
             setIsLoading(false) // Set loading to false when the request completes
         }
@@ -136,6 +138,7 @@ export default function Herosection(props: any) {
                                 </div>
                             </div>
                         </form>
+                        <p>error is {failure}</p>
                     </>
                 )}
                 <div className='flex justify-end'>
