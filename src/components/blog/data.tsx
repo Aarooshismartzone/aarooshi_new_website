@@ -1,8 +1,7 @@
 'use client'
-
 import { useEffect, useState } from "react";
 
-export type CategoryType = {
+type CategoryType = {
     id: number;
     slug: string;
     name: string;
@@ -61,19 +60,4 @@ export const PostData = () => {
     }, [])
 
     return data
-}
-
-export async function getStaticProps() {
-    const categoriesResponse = await fetch('https://busytiger.com/api/getblogcategories');
-    const categoriesData = await categoriesResponse.json();
-
-    const postsResponse = await fetch('https://busytiger.com/api/getblogposts');
-    const postsData = await postsResponse.json();
-
-    return {
-        props: {
-            categories: categoriesData,
-            posts: postsData
-        }
-    };
 }
