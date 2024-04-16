@@ -7,10 +7,10 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 
 interface TestThisProps {
-    data: CategoryType[];
+    categoryData: CategoryType[];
 }
 
-const BlogTopNav: React.FC<TestThisProps> = ({ data }) => {
+const BlogTopNav: React.FC<TestThisProps> = ({ categoryData }) => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
@@ -27,7 +27,7 @@ const BlogTopNav: React.FC<TestThisProps> = ({ data }) => {
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {data.map((item, index) => {
+                    {categoryData.map((item, index) => {
                         return (
                             <>
                                 <NavbarItem key={index}>
@@ -47,7 +47,7 @@ const BlogTopNav: React.FC<TestThisProps> = ({ data }) => {
                     </div>
                 </NavbarContent>
                 <NavbarMenu>
-                    {data.map((item, index) => (
+                    {categoryData.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color="primary"
