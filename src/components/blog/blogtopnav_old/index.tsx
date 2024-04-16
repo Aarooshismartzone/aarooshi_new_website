@@ -6,7 +6,7 @@ import { CategoryData } from '../data';
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 
-export default function BlogTopNav() {
+export default function BlogTopNavOld() {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
