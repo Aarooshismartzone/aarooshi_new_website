@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
 import styles from './styles/style.module.scss'
-import BlogTopNav from '@/components/blog/blogtopnav'
+//import BlogTopNav from '@/components/blog/blogtopnav'
 import { PostData } from '@/components/blog/data'
 import Blogcard from '@/components/blog/blogcard'
+import BlogTopNav from '@/pages/blogcomponent/topblognav'
 
 
 export default function page() {
@@ -13,7 +14,7 @@ export default function page() {
     return (
         <>
             <div className='bg-gray-800 text-white min-h-lvh'>
-                <BlogTopNav />
+                <BlogTopNav data={[]} />
                 <Anim />
                 <div className='lg:mx-40 md:mx-20 mx-10'>
                     <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>
