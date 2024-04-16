@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background-image: linear-gradient(to right, rgb(42, 0, 42), #1c1a1f, #1c1a1f, #1c1a1f, rgb(13, 0, 34));
+    /* Dark gray background  */
+}
+
+.text {
+    @apply lg:text-6xl md:text-5xl text-4xl;
+    
+    color: #e2debf;
+    /* White text color */
+    text-align: center;
+    font-family: "Londrina Outline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ad56ff;
+        /* Neon purple color */
+        text-shadow:
+            0 0 10px #ad56ff,
+            0 0 20px #fff756,
+            0 0 40px #ff56d2,
+            0 0 80px #80ff56,
+            0 0 120px #56fff1,
+            0 0 150px #ad56ff;
+        opacity: 0;
+        animation: neonAnimation 3s ease-in-out infinite alternate !important;
+        /* Animation */
+    }
+}
+
+@keyframes neonAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
