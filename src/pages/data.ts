@@ -20,18 +20,26 @@ export interface PostType {
 }
 
 export const getStaticProps = async () => {
-    const getcat = await fetch('https://busytiger.com/api/getblogcategories')
-    const getpost = await fetch('https://busytiger.com/api/getblogposts')
+    try {
+        const getcat = await fetch('https://busytiger.com/api/getblogcategories');
+        const getpost = await fetch('https://busytiger.com/api/getblogposts');
 
-    const categoryData = await getcat.json()
-    const postData = await getpost.json();
+        const categoryData = await getcat.json();
+        const postData = await getpost.json();
 
-    return {
-        props: {
-            categoryData,
-            postData
-        }
+        return {
+            props: {
+                categoryData,
+                postData
+            }
+        };
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return {
+            props: {
+                categoryData: [],
+                postData: []
+            }
+        };
     }
-}
-
-export default getStaticProps;
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import { getStaticProps, CategoryType } from "./data"; // Adjusted import
+import { getStaticProps, CategoryType } from "./data";
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import { BsTwitterX } from "react-icons/bs";
@@ -8,6 +8,7 @@ import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 interface TestThisProps {
     categoryData: CategoryType[];
 }
+
 
 const BlogTopNav: React.FC<TestThisProps> = ({ categoryData }) => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -26,17 +27,13 @@ const BlogTopNav: React.FC<TestThisProps> = ({ categoryData }) => {
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {categoryData.map((item, index) => {
-                        return (
-                            <>
-                                <NavbarItem key={index}>
-                                    <Link className='text-white' color="foreground" href="#">
-                                        {item.name}
-                                    </Link>
-                                </NavbarItem>
-                            </>
-                        )
-                    })}
+                    {categoryData.map((item, index) => (
+                        <NavbarItem key={index}>
+                            <Link className='text-white' color="foreground" href="#">
+                                {item.name}
+                            </Link>
+                        </NavbarItem>
+                    ))}
                 </NavbarContent>
                 <NavbarContent justify="end">
                     <div className='flex justify-evenly w-40 mt-2'>
@@ -64,4 +61,6 @@ const BlogTopNav: React.FC<TestThisProps> = ({ categoryData }) => {
     )
 }
 
-export default BlogTopNav;
+export { BlogTopNav, getStaticProps }; // exporting BlogTopNav and getStaticProps
+
+export default BlogTopNav; // default export
