@@ -1,7 +1,7 @@
 import React from "react";
-import getStaticProps from "../data";
+import getStaticProps from "./data";
 import Image from 'next/image';
-import { CategoryType } from "../data";
+import { CategoryType } from "./data";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link } from "@nextui-org/react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
