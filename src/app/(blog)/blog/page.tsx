@@ -9,7 +9,6 @@ import { PostData } from '@/components/blog/data'
 export default function Page({ params }: { params: { slug: string } }) {
 
     const posts = PostData()
-    const post = posts.filter(u => u.slug === params.slug)
 
     return (
         <>
