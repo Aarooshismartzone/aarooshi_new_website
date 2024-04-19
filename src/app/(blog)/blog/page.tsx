@@ -4,7 +4,6 @@ import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import Blogcard from '@/components/blog/blogcard'
 import { PostData } from '@/components/blog/data'
-import { Londrina_Outline } from 'next/font/google'
 
 
 export default function Page({ params }: { params: { slug: string } }) {
