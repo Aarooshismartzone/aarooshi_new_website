@@ -33,9 +33,9 @@ export default function Topbar(title: any) {
                         <FaLinkedin />
                     </div>
                 </div>
-                <div className='md:hidden flex justify-between text-white'>
-                    <Image src="images/logo.png" className="sm:w-28 w-20 p-0" alt='Aarooshi' />
-                    <FaHamburger onClick={toggleDrawer(true)} />
+                <div className='md:hidden flex justify-between text-white p-1'>
+                <Link href='/'><Image src="images/logo.png" className="sm:w-28 w-20 p-0" alt='Aarooshi' /></Link>
+                    <FaHamburger className='text-2xl' onClick={toggleDrawer(true)} />
                 </div>
                 <Drawer open={open} onClose={toggleDrawer(false)}>
                     {DrawerList}
