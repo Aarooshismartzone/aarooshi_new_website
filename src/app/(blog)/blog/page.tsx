@@ -2,19 +2,19 @@
 import React from 'react'
 import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
-import { CategoryType, PostData, getStaticProps } from '@/components/blog/data'
 import Blogcard from '@/components/blog/blogcard'
+import { PostData } from '@/components/blog/data'
 
-export { getStaticProps };
 
-const Page: React.FC<{ categories: CategoryType[] }> = ({ categories }) => {
+export default function Page({ params }: { params: { slug: string } }) {
 
     const posts = PostData()
+    const post = posts.filter(u => u.slug === params.slug)
 
     return (
         <>
             <div className='bg-gray-800 text-white min-h-lvh'>
-                <BlogTopNav categories={categories} />
+                <BlogTopNav />
                 <Anim />
                 <div className='lg:mx-40 md:mx-20 mx-10'>
                     <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>
@@ -46,5 +46,3 @@ const Anim: React.FC = () => {
         </>
     )
 }
-
-export default Page
