@@ -68,7 +68,10 @@ export default function Home() {
   }
 
   const loadit = () => {
-    setLoading(!loading);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000)
   }
 
   return (
