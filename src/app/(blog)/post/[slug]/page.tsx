@@ -1,14 +1,22 @@
 'use client'
 import BlogTopNav from '@/components/blog/blogtopnav';
-import { PostData } from '@/components/blog/data'
+//import { PostData } from '@/components/blog/data'
 import { Image } from "@nextui-org/react";
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { PostType, fetchPostData } from '../../blog/data';
 
 export default function Page({ params }: { params: { slug: string } }) {
 
-    const posts = PostData()
-    const post = posts.filter(u => u.slug === params.slug)
+    const [data, setData] = useState<PostType[]>([]);
+
+    useEffect(() => {
+        fetchPostData().then(res => {
+            setData(res);
+        })
+    }, [])
+    
+    const post = data.filter(u => u.slug === params.slug)
 
     return (
         <>
@@ -21,7 +29,6 @@ export default function Page({ params }: { params: { slug: string } }) {
                         <div className='bg-gray-800 text-white'>
                             <BlogTopNav />
                             <div className='lg:mx-40 md:mx-20 mx-5 lg:py-24 md:py-16 py-8'>
-
                                 <Image src={'/images/blog/' + p.image} alt='Aarooshi Blog' className='float-left mr-3 mb-2 md:w-80 w-full' />
                                 <h1 className='md:text-4xl text-3xl tracking-wider uppercase font-bold text-purple-200'>{p.title}</h1>
                                 <p className='font-bold italic mt-2'>{p.date}</p>

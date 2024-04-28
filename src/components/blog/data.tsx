@@ -25,17 +25,17 @@ type PostType = {
 export const CategoryData = () => {
     const [data, setData] = useState<CategoryType[]>([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://busytiger.com/api/getblogcategories');
-                const jsonData = await response.json();
-                setData(jsonData);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://busytiger.com/api/getblogcategories');
+            const jsonData = await response.json();
+            setData(jsonData);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
+    useEffect(() => {
         fetchData();
     }, [])
 
@@ -45,17 +45,17 @@ export const CategoryData = () => {
 export const PostData = () => {
     const [data, setData] = useState<PostType[]>([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://busytiger.com/api/getblogposts');
-                const jsonData = await response.json();
-                setData(jsonData);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://busytiger.com/api/getblogposts');
+            const jsonData = await response.json();
+            setData(jsonData);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
+    useEffect(() => {
         fetchData();
     }, [])
 

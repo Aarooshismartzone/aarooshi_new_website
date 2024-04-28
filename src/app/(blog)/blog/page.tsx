@@ -1,14 +1,23 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import Blogcard from '@/components/blog/blogcard'
-import { PostData } from '@/components/blog/data'
+import { PostType, fetchPostData } from './data'
+//import { PostData } from '@/components/blog/data'
 
 
-export default function Page({ params }: { params: { slug: string } }) {
 
-    const posts = PostData()
+
+export default function Blogpage() {
+
+    const [data, setData] = useState<PostType[]>([]);
+
+    useEffect(() => {
+        fetchPostData().then(res => {
+            setData(res);
+        })
+    }, [])
 
     return (
         <>
@@ -18,7 +27,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <div className='lg:mx-40 md:mx-20 mx-10'>
                     <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>
                     <div className='grid grid-col lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
-                        {posts.map((p) => {
+                        {data.map((p) => {
                             return (
                                 <>
                                     <div className='col-span-1'>
