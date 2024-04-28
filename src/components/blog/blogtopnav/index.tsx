@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
-import { CategoryData } from '../data';
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { fetchCategoryData } from '@/app/(blog)/blog/data';
@@ -24,10 +23,6 @@ export default function BlogTopNav() {
             setCategoryData(res);
         })
     }, [])
-
-    //return data
-
-    //const cats = CategoryData();
 
     return (
         <>

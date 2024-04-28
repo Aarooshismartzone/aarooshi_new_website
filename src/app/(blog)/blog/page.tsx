@@ -4,10 +4,6 @@ import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import Blogcard from '@/components/blog/blogcard'
 import { PostType, fetchPostData } from './data'
-//import { PostData } from '@/components/blog/data'
-
-
-
 
 export default function Blogpage() {
 
