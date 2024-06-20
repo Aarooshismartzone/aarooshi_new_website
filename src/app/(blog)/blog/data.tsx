@@ -25,3 +25,4 @@ export const fetchPostData = async () => {
     const jsonData = await response.json();
     return jsonData;
 };
+

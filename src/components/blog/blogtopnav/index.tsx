@@ -4,13 +4,10 @@ import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { fetchCategoryData } from '@/app/(blog)/blog/data';
+import { CategoryType, MdbCategories } from '@/app/(blog)/blog/getData';
+//import { fetchCategoryData } from '@/app/(blog)/blog/data';
 
-type CategoryType = {
-    id: number;
-    slug: string;
-    name: string;
-};
+
 
 export default function BlogTopNav() {
 
@@ -18,11 +15,25 @@ export default function BlogTopNav() {
 
     const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
 
+    // useEffect(() => {
+    //     //fetchCategoryData().then(res => {
+    //         setCategoryData(res);
+    //     })
+    // }, [])
+
     useEffect(() => {
-        fetchCategoryData().then(res => {
-            setCategoryData(res);
-        })
-    }, [])
+        const fetchData = async () => {
+          try {
+            const data = await MdbCategories();
+            setCategoryData(data);
+          } catch (error) {
+            console.error('Error fetching category data:', error);
+            // Handle error state if needed
+          }
+        };
+    
+        fetchData();
+      }, []); // Empty dependency array means this effect runs once on mount
 
     return (
         <>
