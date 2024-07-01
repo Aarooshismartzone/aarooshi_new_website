@@ -1,5 +1,6 @@
 'use client'
 import BlogTopNav from '@/components/blog/blogtopnav';
+//import { PostData } from '@/components/blog/data'
 import { Image } from "@nextui-org/react";
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
@@ -14,7 +15,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             setData(res);
         })
     }, [])
-
+    
     const post = data.filter(u => u.slug === params.slug)
 
     return (

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import { CategoryData } from '../data';
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { CategoryType, MdbCategories } from '@/app/(blog)/blog/getData';
@@ -34,6 +35,10 @@ export default function BlogTopNav() {
     
         fetchData();
       }, []); // Empty dependency array means this effect runs once on mount
+
+    //return data
+
+    //const cats = CategoryData();
 
     return (
         <>
