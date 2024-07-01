@@ -30,7 +30,7 @@ export default function BlogTopNav() {
                         className="sm:hidden mt-0"
                     />
                     <NavbarBrand>
-                    <Link href='/'><Image src="images/logo.png" className='w-52' alt='Aarooshi' /></Link>
+                    <Link href='/'><Image src="/images/logo.png" width={100} height={100} className='w-52 h-auto' alt='Aarooshi' /></Link>
                     </NavbarBrand>
                 </NavbarContent>
 

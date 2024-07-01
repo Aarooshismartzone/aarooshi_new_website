@@ -25,7 +25,7 @@ export default function Topbar(title: any) {
         <>
             <div className='top-class'>
                 <div className='md:flex justify-between text-white hidden'>
-                    <Link href='/'><Image src="images/logo.png" className="w-36 p-0" alt="Aarooshi" /></Link>
+                    <Link href='/'><Image src="/images/logo.png" height={100} width={100} className="w-36 h-auto p-0" alt="Aarooshi" /></Link>
                     <p className='text-xl font-bold uppercase'>{title.name}</p>
                     <div className='flex justify-evenly w-40 mt-2'>
                         <FaInstagramSquare />
