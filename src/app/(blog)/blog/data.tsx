@@ -1,4 +1,10 @@
 
+export type CategoryType = {
+    id: number;
+    slug: string;
+    name: string
+}
+
 export type PostType = {
     id: number;
     cat_id: number;

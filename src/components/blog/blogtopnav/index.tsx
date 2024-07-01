@@ -5,8 +5,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navba
 import { CategoryData } from '../data';
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { CategoryType, MdbCategories } from '@/app/(blog)/blog/getData';
-//import { fetchCategoryData } from '@/app/(blog)/blog/data';
+import { CategoryType, fetchCategoryData } from '@/app/(blog)/blog/data';
 
 
 
@@ -16,29 +15,11 @@ export default function BlogTopNav() {
 
     const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
 
-    // useEffect(() => {
-    //     //fetchCategoryData().then(res => {
-    //         setCategoryData(res);
-    //     })
-    // }, [])
-
     useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const data = await MdbCategories();
-            setCategoryData(data);
-          } catch (error) {
-            console.error('Error fetching category data:', error);
-            // Handle error state if needed
-          }
-        };
-    
-        fetchData();
-      }, []); // Empty dependency array means this effect runs once on mount
-
-    //return data
-
-    //const cats = CategoryData();
+        fetchCategoryData().then(res => {
+            setCategoryData(res);
+        })
+    }, [])
 
     return (
         <>
