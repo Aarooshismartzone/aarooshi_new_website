@@ -78,7 +78,7 @@ export default function Home() {
     <>
       <div className="bg-gradient-to-r from-violet-900 to-fuchsia-900 w-full h-full">
         <div className="absolute left-4 top-4">
-          <Image src="images/logo.png" className='w-52' alt='Aarooshi' />
+          <Image src="/images/logo.png" className='w-52 h-auto' alt='Aarooshi' height={100} width={100} />
           <div>
             <h1 className="text-3xl text-white mt-2 sm:block hidden">Take your business online. We are there for you.</h1>
             <p className={info}>Explore our services. Click the box at the centre.</p>
