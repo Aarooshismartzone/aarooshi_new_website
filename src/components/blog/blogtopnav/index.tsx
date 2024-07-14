@@ -21,6 +21,10 @@ export default function BlogTopNav() {
         })
     }, [])
 
+    //return data
+
+    //const cats = CategoryData();
+
     return (
         <>
             <Navbar onMenuOpenChange={setIsMenuOpen} className=' bg-gray-900' maxWidth='full'>
