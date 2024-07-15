@@ -1,7 +1,7 @@
 
 export type PostType = {
-    id: number;
-    cat_id: number;
+    id: string;
+    cat_id: string;
     cat_name: string;
     title: string;
     slug: string;

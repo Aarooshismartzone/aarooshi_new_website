@@ -7,7 +7,7 @@ import { BsTwitterX } from 'react-icons/bs';
 import { fetchCategoryData } from '@/app/(blog)/blog/data';
 
 type CategoryType = {
-    id: number;
+    id: string;
     slug: string;
     name: string;
 };
