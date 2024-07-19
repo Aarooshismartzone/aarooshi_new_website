@@ -1,6 +1,7 @@
+import axios from 'axios';
 
 export type PostType = {
-    id: string;
+    _id: string;
     cat_id: string;
     cat_name: string;
     title: string;
@@ -10,23 +11,24 @@ export type PostType = {
     tags: string;
     keywords: string;
     description: string;
-    readable_mins: number;
-    date: string
+    readable_mins: string;
+    date: string;
 }
 
 export const fetchCategoryData = async () => {
-    // const response = await fetch('https://busytiger.com/api/getblogcategories');
-    const response = await fetch('https://aarooshibackend.onrender.com/api/categories');
-    if (!response.ok) {
-        throw new Error('Network response was not ok');
+    try {
+        const response = await axios.get('http://localhost:8080/api/categories');
+        return response.data;
+    } catch (error:any) {
+        throw new Error('Error fetching category data: ' + error.message);
     }
-    const jsonData = await response.json();
-    return jsonData;
 };
 
 export const fetchPostData = async () => {
-    // const response = await fetch('https://busytiger.com/api/getblogposts');
-    const response = await fetch('https://aarooshibackend.onrender.com/api/posts');
-    const jsonData = await response.json();
-    return jsonData;
+    try {
+        const response = await axios.get('http://localhost:8080/api/posts');
+        return response.data;
+    } catch (error:any) {
+        throw new Error('Error fetching post data: ' + error.message);
+    }
 };
