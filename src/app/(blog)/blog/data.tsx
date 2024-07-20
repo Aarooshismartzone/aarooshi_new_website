@@ -1,5 +1,11 @@
 import axios from 'axios';
 
+export type CategoryType = {
+    id: number;
+    slug: string;
+    name: string;
+};
+
 export type PostType = {
     _id: string;
     cat_id: string;
@@ -17,7 +23,7 @@ export type PostType = {
 
 export const fetchCategoryData = async () => {
     try {
-        const response = await axios.get('/api/categories');
+        const response = await axios.get('https://aarooshibackend.onrender.com/api/categories');
         return response.data;
     } catch (error:any) {
         throw new Error('Error fetching category data: ' + error.message);
@@ -26,7 +32,7 @@ export const fetchCategoryData = async () => {
 
 export const fetchPostData = async () => {
     try {
-        const response = await axios.get('http://localhost:8080/api/posts');
+        const response = await axios.get('https://aarooshibackend.onrender.com/api/posts');
         return response.data;
     } catch (error:any) {
         throw new Error('Error fetching post data: ' + error.message);
