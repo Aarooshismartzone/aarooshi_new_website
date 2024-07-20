@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export type CategoryType = {
-    id: number;
+    _id: string;
     slug: string;
     name: string;
 };
