@@ -13,7 +13,7 @@ export type PostType = {
     cat_name: string;
     title: string;
     slug: string;
-    content: Text;
+    content: string;
     image: string;
     tags: string;
     keywords: string;
