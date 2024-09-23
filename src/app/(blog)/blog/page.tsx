@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 import styles from './styles/style.module.scss'
 import BlogTopNav from '@/components/blog/blogtopnav'
 import Blogcard from '@/components/blog/blogcard'
-import { PostType, fetchPostData } from './data'
+//import { PostType, fetchPostData } from './data'
+import { PostData, PostType } from '@/components/blog/data'
 //import { PostData } from '@/components/blog/data'
 
 
@@ -11,13 +12,13 @@ import { PostType, fetchPostData } from './data'
 
 export default function Blogpage() {
 
-    const [data, setData] = useState<PostType[]>([]);
+   // const [data, setData] = useState<PostType[]>([]);
 
-    useEffect(() => {
-        fetchPostData().then(res => {
-            setData(res);
-        })
-    }, [])
+    // useEffect(() => {
+    //     fetchPostData().then(res => {
+    //         setData(res);
+    //     })
+    // }, [])
 
     return (
         <>
@@ -27,11 +28,11 @@ export default function Blogpage() {
                 <div className='lg:mx-40 md:mx-20 mx-10'>
                     <h1 className='text-2xl text-center uppercase mt-4 mb-4'>Trending</h1>
                     <div className='grid grid-col lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
-                        {data.map((p) => {
+                        {PostData.map((p:PostType) => {
                             return (
                                 <>
                                     <div className='col-span-1'>
-                                        <Blogcard slug={p.slug} title={p.title} readable_mins={p.readable_mins} image={p.image} />
+                                        <Blogcard slug={p.slug} title={p.title} readable_mins={p.readable_mins} image={p.image} _id={p._id} cat_id={p.cat_id} cat_name={p.cat_name} content={p.content} tags={p.tags} keywords={p.keywords} description={p.description} date={p.date} />
                                     </div>
                                 </>
                             )

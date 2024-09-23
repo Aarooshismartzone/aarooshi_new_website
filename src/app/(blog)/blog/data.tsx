@@ -21,20 +21,20 @@ export type PostType = {
     date: string;
 }
 
-export const fetchCategoryData = async () => {
-    try {
-        const response = await axios.get('https://aarooshibackend.onrender.com/api/categories');
-        return response.data;
-    } catch (error:any) {
-        throw new Error('Error fetching category data: ' + error.message);
-    }
-};
+// export const fetchCategoryData = async () => {
+//     try {
+//         const response = await axios.get('https://aarooshibackend.onrender.com/api/categories');
+//         return response.data;
+//     } catch (error:any) {
+//         throw new Error('Error fetching category data: ' + error.message);
+//     }
+// };
 
-export const fetchPostData = async () => {
-    try {
-        const response = await axios.get('https://aarooshibackend.onrender.com/api/posts');
-        return response.data;
-    } catch (error:any) {
-        throw new Error('Error fetching post data: ' + error.message);
-    }
-};
+// export const fetchPostData = async () => {
+//     try {
+//         const response = await axios.get('https://aarooshibackend.onrender.com/api/posts');
+//         return response.data;
+//     } catch (error:any) {
+//         throw new Error('Error fetching post data: ' + error.message);
+//     }
+// };

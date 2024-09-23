@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
-import { CategoryType, fetchCategoryData } from '@/app/(blog)/blog/data';
+import { CategoryType } from '@/app/(blog)/blog/data';
+import { CategoryData } from '../data';
 
 
 
@@ -12,13 +13,13 @@ export default function BlogTopNav() {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-    const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
+    // const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
 
-    useEffect(() => {
-        fetchCategoryData().then(res => {
-            setCategoryData(res);
-        })
-    }, [])
+    // useEffect(() => {
+    //     fetchCategoryData().then(res => {
+    //         setCategoryData(res);
+    //     })
+    // }, [])
 
     return (
         <>
@@ -34,7 +35,7 @@ export default function BlogTopNav() {
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {categoryData.map((item, index) => {
+                    {CategoryData.map((item:CategoryType, index) => {
                         return (
                             <NavbarItem key={index}>
                                 <Link className='text-white' color="foreground" href="#">
@@ -54,11 +55,11 @@ export default function BlogTopNav() {
                     </div>
                 </NavbarContent>
                 <NavbarMenu>
-                    {categoryData.map((item, index) => (
+                    {CategoryData.map((item:CategoryType, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color={
-                                    index === 2 ? "primary" : index === categoryData.length - 1 ? "danger" : "foreground"
+                                    index === 2 ? "primary" : index === CategoryData.length - 1 ? "danger" : "foreground"
                                 }
                                 className="w-full"
                                 href="#"
