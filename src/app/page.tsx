@@ -62,7 +62,7 @@ export default function Home() {
         ocs: 'flex md:gap-4 gap-2 md:p-3 px-1 py-3 md:justify-between justify-evenly',
         box: 'relative flex flex-col justify-between align-middle bg-black py-2 opacity-60 w-72 md:w-96 md:w-96 rounded-lg shadow-lg shadow-cyan-500/50 duration-200',
         linkCl: 'block w-full h-full linkcl duration-500 md:text-sm txs text-white md:text-gray-900 text-center font-bold',
-        info: 'text-white text-sm font-bold mt-2 mx-1 text-center uppercase'
+        info: 'text-white md:text-sm text-[10px] font-bold mt-2 mx-1 text-center uppercase'
       }
     })
   }
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
         <div className="absolute left-1/2 top-[12%] transform -translate-x-1/2 translate-y-[-12%] text-center">
           <div>
-            <h1 className="md:text-3xl text-xl text-white mt-2 uppercase xl:whitespace-nowrap whitespace-normal font-bold">Take your business online. We are there for you.</h1>
+            <h1 className="lg:text-3xl md:text-2xl text-md text-white mt-2 uppercase xl:whitespace-nowrap whitespace-normal font-bold">Take your business online. We are there for you.</h1>
             <p className={info}>Explore our services. Click the box at the centre.</p>
           </div>
         </div>
