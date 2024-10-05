@@ -28,7 +28,7 @@ export default function Home() {
     ocs: 'flex gap-4 justify-between p-2',
     box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50',
     linkCl: 'hidden',
-    info: 'text-white font-bold mt-2 mx-5 text-center uppercase'
+    info: 'text-white md:text-sm text-[10px] font-bold mt-2 mx-5 text-center uppercase'
   });
 
   const cls1 = value.cls1
