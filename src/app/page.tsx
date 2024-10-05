@@ -82,7 +82,7 @@ export default function Home() {
         </div>
         <div className="absolute left-1/2 top-[12%] transform -translate-x-1/2 translate-y-[-12%] text-center">
           <div>
-            <h1 className="md:text-3xl text-xl text-white mt-2 uppercase whitespace-nowrap font-bold">Take your business online. We are there for you.</h1>
+            <h1 className="md:text-3xl text-xl text-white mt-2 uppercase xl:whitespace-nowrap whitespace-normal font-bold">Take your business online. We are there for you.</h1>
             <p className={info}>Explore our services. Click the box at the centre.</p>
           </div>
         </div>
