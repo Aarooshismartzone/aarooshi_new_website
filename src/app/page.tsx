@@ -28,7 +28,7 @@ export default function Home() {
     ocs: 'flex gap-4 justify-between p-2',
     box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50',
     linkCl: 'hidden',
-    info: 'text-white font-bold mt-2 mx-5'
+    info: 'text-white font-bold mt-2 mx-5 text-center uppercase'
   });
 
   const cls1 = value.cls1
@@ -62,7 +62,7 @@ export default function Home() {
         ocs: 'flex md:gap-4 gap-2 md:p-3 px-1 py-3 md:justify-between justify-evenly',
         box: 'relative flex flex-col justify-between align-middle bg-black py-2 opacity-60 w-72 md:w-96 md:w-96 rounded-lg shadow-lg shadow-cyan-500/50 duration-200',
         linkCl: 'block w-full h-full linkcl duration-500 md:text-sm txs text-white md:text-gray-900 text-center font-bold',
-        info: 'text-white text-sm font-bold mt-2 mx-1'
+        info: 'text-white text-sm font-bold mt-2 mx-1 text-center uppercase'
       }
     })
   }
@@ -76,35 +76,37 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-violet-900 to-fuchsia-900 w-full h-full">
+      <div className="w-full h-screen bg-bottom bg-cover" style={{ backgroundImage: `url('/images/real_bg.jpg')` }}>
         <div className="absolute left-4 top-4">
           <Image src="/images/logo.png" className='w-52 h-auto' alt='Aarooshi' height={600} width={600} />
+        </div>
+        <div className="absolute left-1/2 top-[12%] transform -translate-x-1/2 translate-y-[-12%] text-center">
           <div>
-            <h1 className="text-3xl text-white mt-2 sm:block hidden">Take your business online. We are there for you.</h1>
+            <h1 className="md:text-3xl text-xl text-white mt-2 uppercase whitespace-nowrap font-bold">Take your business online. We are there for you.</h1>
             <p className={info}>Explore our services. Click the box at the centre.</p>
           </div>
         </div>
         <div className="flex items-center justify-center h-screen">
           {loading ? (
-            <Spinner label="Loading..." color="secondary" labelColor="secondary"/>
+            <Spinner label="Loading..." color="secondary" labelColor="secondary" />
           ) : (
-          <div className={box} onClick={expand}>
-            <div className={ocs}>
-              <div className={cls1}><a href='/e-commerce-website' className={linkCl} onClick={loadit}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
-              <div className={cls2}><a href='/lms-crm-portal' className={linkCl} onClick={loadit}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-green-300 md:text-green-600" />LMS/CRM portal</a></div>
-              <div className={cls3}><a href='/informative-website' className={linkCl} onClick={loadit}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-blue-300 md:text-blue-600" />Informative website</a></div>
+            <div className={box} onClick={expand}>
+              <div className={ocs}>
+                <div className={cls1}><a href='/e-commerce-website' className={linkCl} onClick={loadit}><GiShoppingCart className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-yellow-300 md:text-yellow-600" />E-commerce website</a></div>
+                <div className={cls2}><a href='/lms-crm-portal' className={linkCl} onClick={loadit}><CgWebsite className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-green-300 md:text-green-600" />LMS/CRM portal</a></div>
+                <div className={cls3}><a href='/informative-website' className={linkCl} onClick={loadit}><BsInfoSquareFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-blue-300 md:text-blue-600" />Informative website</a></div>
+              </div>
+              <div className={ocs}>
+                <div className={cls4}><a href='/blog-e-magazine' className={linkCl} onClick={loadit}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-pink-300 md:text-pink-600" />Blog/ E-magazine</a></div>
+                <div className={cls5}><a href='/other-websites' className={linkCl} onClick={loadit}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-sky-300 md:text-sky-600" />Any Other Website</a></div>
+                <div className={cls6}><a href='/mobile-application' className={linkCl} onClick={loadit}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-amber-300 md:text-amber-600" />Mobile Application</a></div>
+              </div>
+              <div className={ocs}>
+                <div className={cls7}><a href='/about-us' className={linkCl} onClick={loadit}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
+                <div className={cls8}><a href='/get-in-touch' className={linkCl} onClick={loadit}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
+                <div className={cls9}><a href='/blog' className={linkCl} onClick={loadit}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
+              </div>
             </div>
-            <div className={ocs}>
-              <div className={cls4}><a href='/blog-e-magazine' className={linkCl} onClick={loadit}><FaBlog className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-pink-300 md:text-pink-600" />Blog/ E-magazine</a></div>
-              <div className={cls5}><a href='/other-websites' className={linkCl} onClick={loadit}><MdOutlineWeb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-sky-300 md:text-sky-600" />Any Other Website</a></div>
-              <div className={cls6}><a href='/mobile-application' className={linkCl} onClick={loadit}><MdOutlineAppShortcut className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-amber-300 md:text-amber-600" />Mobile Application</a></div>
-            </div>
-            <div className={ocs}>
-              <div className={cls7}><a href='/about-us' className={linkCl} onClick={loadit}><RiFileInfoFill className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-fuchsia-300 md:text-fuchsia-600" />About Aarooshi</a></div>
-              <div className={cls8}><a href='/get-in-touch' className={linkCl} onClick={loadit}><GiLetterBomb className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-zinc-300 md:text-zinc-600" />Get In Touch</a></div>
-              <div className={cls9}><a href='/blog' className={linkCl} onClick={loadit}><IoReader className="md:my-2 my-1 md:mx-7 mx-4 md:text-3xl text-xl text-lime-300 md:text-lime-600" />Aarooshi Blog</a></div>
-            </div>
-          </div>
           )}
         </div>
       </div>
