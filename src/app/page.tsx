@@ -26,9 +26,9 @@ export default function Home() {
     cls8: 'h-4 w-4 bg-zinc-300',
     cls9: 'h-4 w-4 bg-lime-300',
     ocs: 'flex gap-4 justify-between p-2',
-    box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50',
+    box: 'relative bg-black opacity-60 h-24 w-24 align-center rounded-lg shadow-lg shadow-cyan-500/50 md:mt-0 mt-32',
     linkCl: 'hidden',
-    info: 'text-white md:text-sm text-[10px] font-bold mt-2 mx-5 text-center uppercase'
+    info: 'text-white md:text-sm text-[11px] font-bold mt-2 mx-5 text-center uppercase'
   });
 
   const cls1 = value.cls1
@@ -60,9 +60,9 @@ export default function Home() {
         cls8: 'md:h-24 md:w-24 w-16 h-16 md:bg-gray-300 hover:lg:bg-gray-100 bg-transparent duration-400 p-1 clss8',
         cls9: 'md:h-24 md:w-24 w-16 h-16 md:bg-gray-300 hover:lg:bg-gray-100 bg-transparent duration-400 p-1 clss9',
         ocs: 'flex md:gap-4 gap-2 md:p-3 px-1 py-3 md:justify-between justify-evenly',
-        box: 'relative flex flex-col justify-between align-middle bg-black py-2 opacity-60 w-72 md:w-96 md:w-96 rounded-lg shadow-lg shadow-cyan-500/50 duration-200',
+        box: 'relative flex flex-col justify-between align-middle bg-black py-2 opacity-60 w-72 md:w-96 md:w-96 rounded-lg shadow-lg shadow-cyan-500/50 duration-200 md:mt-0 mt-32',
         linkCl: 'block w-full h-full linkcl duration-500 md:text-sm txs text-white md:text-gray-900 text-center font-bold',
-        info: 'text-white md:text-sm text-[10px] font-bold mt-2 mx-1 text-center uppercase'
+        info: 'text-white md:text-sm text-[11px] font-bold mt-2 mx-1 text-center uppercase'
       }
     })
   }
