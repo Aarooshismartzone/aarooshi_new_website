@@ -1,30 +1,25 @@
 'use client'
+import { useEffect } from 'react';
 import BlogTopNav from '@/components/blog/blogtopnav';
 import { PostData, PostType } from '@/components/blog/data';
-//import { PostData } from '@/components/blog/data'
 import { Image } from "@nextui-org/react";
 import Link from 'next/link';
-//import React, { useEffect, useState } from 'react'
-//import { PostType, fetchPostData } from '../../blog/data';
 
 export default function Page({ params }: { params: { slug: string } }) {
-
-    // const [data, setData] = useState<PostType[]>([]);
-
-    // useEffect(() => {
-    //     fetchPostData().then(res => {
-    //         setData(res);
-    //     })
-    // }, [])
     
     const post = PostData.filter(u => u.slug === params.slug)
+
+    useEffect(() => {
+        if (post.length > 0) {
+            document.title = post[0].title; // Dynamically update the title
+        }
+    }, [post]);
 
     return (
         <>
             {post.map((p:PostType) => {
                 return (
                     <>
-                        <title>Aarooshi - {p.title}</title>
                         <meta name='description' content={p.description} />
                         <meta name='keywords' content={p.keywords} />
                         <div className='bg-gray-800 text-white'>

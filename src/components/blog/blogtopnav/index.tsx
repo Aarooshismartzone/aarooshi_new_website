@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import './style.scss'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
@@ -23,7 +24,7 @@ export default function BlogTopNav() {
 
     return (
         <>
-            <Navbar onMenuOpenChange={setIsMenuOpen} className=' bg-gray-900' maxWidth='full'>
+            <Navbar onMenuOpenChange={setIsMenuOpen} className='blogtopnav' maxWidth='full'>
                 <NavbarContent>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -38,7 +39,7 @@ export default function BlogTopNav() {
                     {CategoryData.map((item:CategoryType, index) => {
                         return (
                             <NavbarItem key={index}>
-                                <Link className='text-white' color="foreground" href="#">
+                                <Link className='text-white font-bold hover:text-[#D85EF7]' color="foreground" href="#">
                                     {item.name}
                                 </Link>
                             </NavbarItem>
