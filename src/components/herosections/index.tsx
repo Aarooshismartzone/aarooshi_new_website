@@ -83,9 +83,6 @@ export default function Herosection(props: any) {
                                     name='pnum'
                                     variant="bordered"
                                     label="Enter your 10-digit number"
-                                    // style={{
-                                    //     outline:'2px solid #712C82'
-                                    // }}
                                     classNames={{
                                         label: '!text-white',
                                         inputWrapper: 'border-[#712C82] focus-within:!border-white'
