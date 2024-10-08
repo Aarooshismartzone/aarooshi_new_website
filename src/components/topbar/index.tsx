@@ -12,6 +12,7 @@ import { GiLetterBomb, GiShoppingCart } from "react-icons/gi";
 import { IoReader } from "react-icons/io5";
 import { MdOutlineAppShortcut, MdOutlineWeb } from "react-icons/md";
 import { RiFileInfoFill } from "react-icons/ri";
+import ExtLinks from '../links';
 
 export default function Topbar(title: any) {
 
@@ -30,9 +31,7 @@ export default function Topbar(title: any) {
                     </Link>
                     <p className='text-xl font-bold uppercase'>{title.name}</p>
                     <div className='flex justify-evenly w-40 mt-2'>
-                        <FaInstagramSquare />
-                        <BsTwitterX />
-                        <FaLinkedin />
+                        <ExtLinks />
                     </div>
                 </div>
                 <div className='md:hidden flex justify-between text-white p-1'>

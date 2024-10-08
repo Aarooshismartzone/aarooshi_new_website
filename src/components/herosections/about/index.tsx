@@ -85,7 +85,7 @@ export default function About() {
 
 
                 <div className='flex justify-end'>
-                    <Link isBlock showAnchorIcon href="#" color="primary" target='_blank'>
+                    <Link isBlock showAnchorIcon href="#" target='_blank' className='font-bold text-white'>
                         Privacy Policy
                     </Link>
                 </div>

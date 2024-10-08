@@ -16,7 +16,7 @@ export default function Page() {
                     <Topiclist />
                     <About />
                 </div>
-                <div className='md:hidden block'>
+                <div className='md:hidden block abovetopbar'>
                     <About />
                 </div>
             </main>

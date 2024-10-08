@@ -1,14 +1,27 @@
 .bgdd {
     @apply col-span-4 min-h-[calc(100%-47.78px)];
-    background-image: url('../../../public/images/background.webp');
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .hero-section{
-    @apply bg-gray-800 text-white py-6 lg:px-48 md:px-32 sm:px-24 px-12 opacity-90 h-full
+    @apply text-white py-6 lg:px-48 md:px-32 sm:px-24 px-12 h-full
+}
+
+.abovetopbar {
+    background-image: url('../../../public/images/second_bg.png');
+    background-attachment: fixed;
 }
 
 .belowtopbar {
-    @apply md:grid lg:grid-cols-5 grid-cols-4 grid-flow-col z-0 hidden min-h-[calc(100vh_-_47.78px)]
+    @apply md:grid xl:grid-cols-5 lg:grid-cols-4 grid-cols-3 grid-flow-col z-0 hidden min-h-[calc(100vh_-_47.78px)];
+    background-image: url('../../../public/images/second_bg.png');
+    background-attachment: fixed;
+}
+
+.belowlist-mob {
+    @apply bg-white px-6 py-6 mx-4 rounded-lg mt-6;
+    .link{
+        font-weight: bold;
+        color: #712c82;
+    }
 }
