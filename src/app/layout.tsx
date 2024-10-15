@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     title: "Aarooshi - The most ideal Website Development Company",
     description: "Leading Website Development Company across Asia, Europe, and North America. Offering e-commerce, CRM, LMS, and Informative website solutions using Laravel, WordPress, React, and Next.js.",
     locale: "en_US", // or other locale if needed
+    images: '/images/icon.jpg'
   },
 
   // Optional Twitter card metadata if you want to add it
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     title: "Aarooshi - The most ideal Website Development Company",
     description: "Providing top-tier web development services across continents. Specializing in e-commerce, LMS, CRM, and more.",
   },
+
 };
 
 
