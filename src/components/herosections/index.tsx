@@ -1,6 +1,7 @@
 'use client'
 import { countries } from '@/utils/data';
 import { Textarea, Button, Link, Input, Select, SelectItem } from '@nextui-org/react';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export default function Herosection(props: any) {
@@ -49,7 +50,8 @@ export default function Herosection(props: any) {
     return (
         <div className='bgdd'>
             <div className="hero-section">
-                <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1>
+                {/* <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1> */}
+                <Image src={`/images/banners/${props.image}`} alt={props.title} width={1000} height={1000} className='w-full h-auto'/>
                 <div className='mt-4 text-xs md:text-sm'>
                     <p>{props.para1}</p>
                     <p className='mt-2'>{props.para2}</p>

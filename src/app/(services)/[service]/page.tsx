@@ -22,6 +22,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                     <div className='md:hidden block abovetopbar'>
                         <Herosection
                             title={s.title}
+                            image={s.image}
                             para1={s.para1}
                             para2={s.para2}
                             formresponse={s.formresponse}
@@ -31,6 +32,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                         <Topiclist />
                         <Herosection
                             title={s.title}
+                            image={s.image}
                             para1={s.para1}
                             para2={s.para2}
                             slug={s.slug}
