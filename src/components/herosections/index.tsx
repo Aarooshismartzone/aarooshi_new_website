@@ -30,7 +30,7 @@ export default function Herosection(props: any) {
                 body: formData,
             });
 
-            if (response.ok) {
+            if (response.status === 200) {
                 setSubmissionStatus('success');
             } else {
                 throw new Error('Failed to submit form');
