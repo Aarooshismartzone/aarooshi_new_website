@@ -19,7 +19,6 @@ export const metadata: Metadata = {
     images: 'https://aarooshi.com/images/og/a.png'
   },
 
-  // Optional Twitter card metadata if you want to add it
   twitter: {
     // card: "summary_large_image", // add image link
     title: "Aarooshi - The most ideal Website Development Company",

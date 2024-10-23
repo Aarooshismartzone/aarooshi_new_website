@@ -25,6 +25,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                             image={s.image}
                             para1={s.para1}
                             para2={s.para2}
+                            slug={s.slug}
                             formresponse={s.formresponse}
                         />
                     </div>
