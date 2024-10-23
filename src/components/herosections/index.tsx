@@ -29,17 +29,22 @@ export default function Herosection(props: any) {
                 method: 'POST',
                 body: formData,
             });
-
-            const data = await response.json();  // Parse the response to JSON
-
-            if (response.status === 200) {
+        
+            // Check if the response is actually JSON
+            const contentType = response.headers.get("content-type");
+            
+            if (response.status === 200 && contentType && contentType.includes("application/json")) {
+                const data = await response.json();  // Parse the response as JSON
                 setSubmissionStatus('success');
                 console.log('Success:', data);  // Log the success response
             } else {
-                throw new Error('Failed to submit form');
+                // Handle non-JSON responses (e.g., HTML error pages)
+                const errorText = await response.text();  // Get raw text of the response
+                console.error('Non-JSON response:', errorText);  // Log it for debugging
+                throw new Error('Unexpected response format');
             }
-
-        } catch (error: unknown) {  // Catch block for 'unknown' type error
+        
+        } catch (error: unknown) {
             if (error instanceof Error) {
                 console.error('Error:', error.message);
                 setFailure(error.message);  // Handle Error object
@@ -51,6 +56,7 @@ export default function Herosection(props: any) {
         } finally {
             setIsLoading(false);  // Stop loading state
         }
+        
     };
 
     return (
