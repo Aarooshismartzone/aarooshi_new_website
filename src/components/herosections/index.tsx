@@ -29,41 +29,29 @@ export default function Herosection(props: any) {
                 method: 'POST',
                 body: formData,
             });
-        
-            // Check if the response is actually JSON
-            const contentType = response.headers.get("content-type");
-            
-            if (response.status === 200 && contentType && contentType.includes("application/json")) {
-                const data = await response.json();  // Parse the response as JSON
+
+            if (response.ok) {
                 setSubmissionStatus('success');
-                console.log('Success:', data);  // Log the success response
             } else {
-                // Handle non-JSON responses (e.g., HTML error pages)
-                const errorText = await response.text();  // Get raw text of the response
-                console.error('Non-JSON response:', errorText);  // Log it for debugging
-                throw new Error('Unexpected response format');
+                throw new Error('Failed to submit form');
             }
-        
-        } catch (error: unknown) {
-            if (error instanceof Error) {
-                console.error('Error:', error.message);
-                setFailure(error.message);  // Handle Error object
-            } else {
-                console.error('Unexpected error:', error);
-                setFailure('An unexpected error occurred');  // Handle non-Error types
-            }
+
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error('Error:', error);
             setSubmissionStatus('failure');
+            setFailure(error);
         } finally {
-            setIsLoading(false);  // Stop loading state
+            setIsLoading(false);
         }
-        
     };
 
     return (
         <div className='bgdd'>
             <div className="hero-section">
                 {/* <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1> */}
-                <Image src={`/images/banners/${props.image}`} alt={props.title} width={1000} height={1000} className='w-full h-auto' />
+                <Image src={`/images/banners/${props.image}`} alt={props.title} width={1000} height={1000} className='w-full h-auto'/>
                 <div className='mt-4 text-xs md:text-sm'>
                     <p>{props.para1}</p>
                     <p className='mt-2'>{props.para2}</p>
@@ -129,7 +117,7 @@ export default function Herosection(props: any) {
                                 />
                                 <Button
                                     type='submit'
-                                    // color="primary"
+                                   // color="primary"
                                     variant='bordered'
                                     className='mt-6 opacity-100 bg-[#712C82] border-none text-white'
                                     disabled={isLoading}
