@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
 
       <h3 className="text-lg font-medium mb-2">1.2 Usage Data</h3>
       <p className="mb-6">
-        We may also collect information that your browser sends whenever you visit our website or use our services. This information may include details such as your device's IP address, browser type, and version, the pages of our website you visit, time and date of your visit, and other diagnostic data.
+        We may also collect information that your browser sends whenever you visit our website or use our services. This information may include details such as your device&apos;s IP address, browser type, and version, the pages of our website you visit, time and date of your visit, and other diagnostic data.
       </p>
 
       <h2 className="text-xl font-semibold mb-3">2. How We Use Your Information</h2>
