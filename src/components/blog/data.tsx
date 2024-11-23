@@ -42,6 +42,7 @@ export type PostType = {
 //     return data
 // }
 
+
 // export const PostData = () => {
 //     const [data, setData] = useState<PostType[]>([]);
 
