@@ -113,13 +113,13 @@ export const PostData = [
             Here are some ways a website can help you get more clients for the services you offer:
         </p>
 
-        <h2 style="font-weight: bold;">1. Increased Visibility</h2>
+        <h2 class="font-bold my-2">1. Increased Visibility</h2>
         <p>
             A well-designed website serves as a digital storefront for your business, accessible 24/7. Potential clients can find you through search engines, social media, or even word-of-mouth referrals. 
             By optimizing your website with the right keywords, you can improve your ranking on search engines and ensure that people searching for services you offer can easily find you.
         </p>
 
-        <h2 style="font-weight:bold;">2. Highlighting Your Services</h2>
+        <h2 class="font-bold my-2">2. Highlighting Your Services</h2>
         <p>
             Your website is the perfect platform to showcase what you do. Use it to:
         </p>
@@ -130,7 +130,7 @@ export const PostData = [
             <li>Use images and videos to demonstrate the value of your services.</li>
         </ul>
 
-        <h2 style="font-weight:bold;">3. Simplified Online Booking</h2>
+        <h2 class="font-bold my-2">3. Simplified Online Booking</h2>
         <p>
             One of the biggest advantages of having a website is enabling online booking. Clients value convenience, and a booking system lets them schedule appointments or services with a few clicks. 
             By integrating an easy-to-use booking tool, you can:
@@ -145,7 +145,7 @@ export const PostData = [
             This streamlined experience can increase client satisfaction and make them more likely to recommend your services to others.
         </p>
 
-        <h2 style="font-weight:bold;">4. Better Record Maintenance</h2>
+        <h2 class="font-bold my-2">4. Better Record Maintenance</h2>
         <p>
             A website can also double as a hub for maintaining client records and data. By integrating a customer relationship management (CRM) system or similar tools, you can:
         </p>
@@ -158,7 +158,7 @@ export const PostData = [
             This not only helps you stay organized but also allows you to personalize your services for repeat clients, increasing their loyalty.
         </p>
 
-        <h2 style="font-weight:bold;">5. Building Trust and Credibility</h2>
+        <h2 class="font-bold my-2">5. Building Trust and Credibility</h2>
         <p>
             A professionally designed website makes a strong first impression. Clients are more likely to trust a business with a modern, user-friendly website than one with no online presence. 
             Here are some trust-building elements to include on your website:
@@ -170,7 +170,7 @@ export const PostData = [
             <li>A privacy policy and terms of service to build confidence in your practices.</li>
         </ul>
 
-        <h2 style="font-weight:bold;">6. Cost-Effective Marketing</h2>
+        <h2 class="font-bold my-2">6. Cost-Effective Marketing</h2>
         <p>
             Traditional marketing methods, such as print ads or direct mail, can be expensive and often have limited reach. A website, on the other hand, provides a cost-effective platform for:
         </p>
@@ -183,19 +183,19 @@ export const PostData = [
             The return on investment (ROI) from digital marketing through your website is often much higher compared to traditional methods.
         </p>
 
-        <h2 style="font-weight:bold;">7. Reaching a Wider Audience</h2>
+        <h2 class="font-bold my-2">7. Reaching a Wider Audience</h2>
         <p>
             Unlike a physical office, a website is not constrained by location. You can reach clients from across the globe, enabling you to expand your business beyond your immediate geographic area. 
             With features like multi-language support or currency converters, you can cater to a diverse audience and grow your client base exponentially.
         </p>
 
-        <h2 style="font-weight:bold;">8. Staying Competitive</h2>
+        <h2 class="font-bold my-2">8. Staying Competitive</h2>
         <p>
             Chances are, your competitors already have a website. By not having one, you risk losing potential clients who might choose another provider simply because they’re easier to find online. 
             A website ensures you stay in the game and remain a viable choice for clients in your industry.
         </p>
 
-        <h2 style="font-weight:bold;">Conclusion</h2>
+        <h2 class="font-bold my-2">Conclusion</h2>
         <p>
             A website is more than just an online presence; it is a powerful tool to attract and retain clients. From increasing visibility to simplifying online booking and improving record maintenance, 
             the benefits of having a website are undeniable. By investing in a professional, user-friendly website, you not only enhance your credibility but also open up endless opportunities to grow your business.
@@ -204,8 +204,8 @@ export const PostData = [
             Don't wait any longer—start building your website today and watch your client base grow!
         </p>`,
         "image": "ecomm.jpg",
-        "tags": "E-commerce, Website",
-        "keywords": "small business, e-commerce website, online store, small business growth, online sales, business website, customer experience, brand awareness, revenue growth, digital marketing, compete online, SEO, analytics, online presence, marketing strategy",
+        "tags": "Service, Website",
+        "keywords": "small business, service website, online store, small business growth, online sales, business website, customer experience, brand awareness, revenue growth, digital marketing, compete online, SEO, analytics, online presence, marketing strategy",
         "description": "Discover why your small business needs an e-commerce website and how it can help you reach new customers, increase sales, and stay competitive.",
         "readable_mins": 5,
         "date": "September 23, 2024",
