@@ -7,4 +7,5 @@ export const metadata: Metadata = {
   description:
     "Need a website and mobile app? Get it from us.",
 };
+
 export default Page;
