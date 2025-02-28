@@ -83,7 +83,6 @@ export default function About() {
                     </Tabs>
                 </div>
 
-
                 <div className='flex justify-end'>
                     <Link isBlock showAnchorIcon href="#" target='_blank' className='font-bold text-white'>
                         Privacy Policy
