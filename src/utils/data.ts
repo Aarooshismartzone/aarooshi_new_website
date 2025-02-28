@@ -12,6 +12,14 @@ export const countries = [
         code: "+44"
     },
     {
+        name: "The Netherlands",
+        code: "+31"
+    },
+    {
+        name: "France",
+        code: "+33"
+    },
+    {
         name: "United States/ Canada",
         code: "+1"
     },

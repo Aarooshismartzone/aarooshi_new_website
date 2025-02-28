@@ -203,7 +203,7 @@ export const PostData = [
         <p>
             Don't wait any longer—start building your website today and watch your client base grow!
         </p>`,
-        "image": "ecomm.jpg",
+        "image": "cus-cus.jpg",
         "tags": "Service, Website",
         "keywords": "small business, service website, online store, small business growth, online sales, business website, customer experience, brand awareness, revenue growth, digital marketing, compete online, SEO, analytics, online presence, marketing strategy",
         "description": "Discover why your small business needs an e-commerce website and how it can help you reach new customers, increase sales, and stay competitive.",
