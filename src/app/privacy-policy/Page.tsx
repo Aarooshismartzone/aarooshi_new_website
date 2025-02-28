@@ -15,6 +15,7 @@ export default function Page() {
         <PrivacyPolicy />
       </div> */}
       <p>Privacy Policy</p>
+      <p>Privacy Policy</p>
     </>
   );
 }
