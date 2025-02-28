@@ -15,8 +15,7 @@ export default function Page() {
       </div>
       <div className='md:hidden block abovetopbar'>
         <PrivacyPolicy />
-      </div>
-      
+      </div>     
       {/* <p>Privacy Policy</p>
       <p>Privacy policy comes here</p> */}
     </>
