@@ -1,5 +1,5 @@
 import React from 'react';
-import PrivacyPolicy from '@/components/privacy-policy';
+import PrivacyPolicy from '@/components/herosections/privacy-policy';
 import Topbar from '@/components/topbar';
 import Topiclist from '@/components/topiclist';
 import './style.scss';
