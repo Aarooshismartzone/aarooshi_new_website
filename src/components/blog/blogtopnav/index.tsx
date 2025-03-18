@@ -3,10 +3,9 @@ import React, { useEffect, useState } from 'react'
 import './style.scss'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
-import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
 import { CategoryType } from '@/app/(blog)/blog/data';
 import { CategoryData } from '../data';
+import ExtLinks from '@/components/links';
 
 
 
@@ -31,15 +30,15 @@ export default function BlogTopNav() {
                         className="sm:hidden mt-0"
                     />
                     <NavbarBrand>
-                    <Link href='/'><Image src="/images/logo.png" className='w-52 h-auto' alt='Aarooshi' height={600} width={600} /></Link>
+                        <Link href='/'><Image src="/images/logo.png" className='w-52 h-auto' alt='Aarooshi' height={600} width={600} /></Link>
                     </NavbarBrand>
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {CategoryData.map((item:CategoryType, index) => {
+                    {CategoryData.map((item: CategoryType, index) => {
                         return (
                             <NavbarItem key={index}>
-                                <Link className='text-white font-bold hover:text-[#D85EF7]' color="foreground" href="#">
+                                <Link className='text-white font-bold hover:text-[#D85EF7]' color="foreground" href={`/blog/${item.slug}`}>
                                     {item.name}
                                 </Link>
                             </NavbarItem>
@@ -49,21 +48,19 @@ export default function BlogTopNav() {
 
                 </NavbarContent>
                 <NavbarContent justify="end">
-                <div className='flex justify-evenly w-40 mt-2'>
-                        <FaInstagramSquare />
-                        <BsTwitterX />
-                        <FaLinkedin />
+                    <div className='flex justify-evenly w-40 mt-2'>
+                        <ExtLinks />
                     </div>
                 </NavbarContent>
                 <NavbarMenu>
-                    {CategoryData.map((item:CategoryType, index) => (
+                    {CategoryData.map((item: CategoryType, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color={
                                     index === 2 ? "primary" : index === CategoryData.length - 1 ? "danger" : "foreground"
                                 }
                                 className="w-full"
-                                href="#"
+                                href={`/blog/${item.slug}`}
                                 size="lg"
                             >
                                 {item.name}
