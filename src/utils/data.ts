@@ -26,5 +26,37 @@ export const countries = [
     {
         name: "United Arab Emirates",
         code: "+971"
+    },
+    {
+        name: "Egypt",
+        code: "+20"
+    },
+    {
+        name: "Russia",
+        code: "+7"
+    },
+    {
+        name: "Greece",
+        code: "+30"
+    },
+    {
+        name: "Türkiye",
+        code: "+90"
+    },
+    {
+        name: "Norway",
+        code: "+47"
+    },
+    {
+        name: "Czechia",
+        code: "+420"
+    },
+    {
+        name: "Sweden",
+        code: "+46"
+    },
+    {
+        name: "Finland",
+        code: "+358"
     }
-]
+];
