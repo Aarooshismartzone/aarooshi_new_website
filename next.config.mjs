@@ -4,7 +4,6 @@ const nextConfig = {
         return [
           {
             source: "/(.*)",
-            has: [{ type: "protocol", value: "http" }],
             destination: "https://aarooshi.com/:path*",
             permanent: true,
           },
