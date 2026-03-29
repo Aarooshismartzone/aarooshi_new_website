@@ -19,11 +19,13 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <React.Fragment key={s.slug}>
                     <title>{s.title}</title>
                     <Topbar name={s.title} />
-                    <div className='md:hidden block'>
+                    <div className='md:hidden block abovetopbar'>
                         <Herosection
                             title={s.title}
+                            image={s.image}
                             para1={s.para1}
                             para2={s.para2}
+                            slug={s.slug}
                             formresponse={s.formresponse}
                         />
                     </div>
@@ -31,6 +33,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                         <Topiclist />
                         <Herosection
                             title={s.title}
+                            image={s.image}
                             para1={s.para1}
                             para2={s.para2}
                             slug={s.slug}

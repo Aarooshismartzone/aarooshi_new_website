@@ -1,6 +1,7 @@
 'use client'
 import { countries } from '@/utils/data';
 import { Textarea, Button, Link, Input, Select, SelectItem } from '@nextui-org/react';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 export default function Herosection(props: any) {
@@ -49,7 +50,8 @@ export default function Herosection(props: any) {
     return (
         <div className='bgdd'>
             <div className="hero-section">
-                <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1>
+                {/* <h1 className='lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold sm:font-normal'>{props.title}</h1> */}
+                <Image src={`/images/banners/${props.image}`} alt={props.title} width={1000} height={1000} className='w-full h-auto'/>
                 <div className='mt-4 text-xs md:text-sm'>
                     <p>{props.para1}</p>
                     <p className='mt-2'>{props.para2}</p>
@@ -68,7 +70,7 @@ export default function Herosection(props: any) {
                                     label="Select Country"
                                     className="max-w-xs"
                                     name='countrycode'
-                                    classNames={{ trigger: 'border-green-400 hover:!border-white focus-within:!border-white' }}
+                                    classNames={{ trigger: 'border-[#712C82] focus-within:!border-white' }}
                                 >
                                     {countries.map((country) => (
                                         <SelectItem key={country.name} value={country.code} textValue={country.name}>
@@ -85,7 +87,7 @@ export default function Herosection(props: any) {
                                     label="Enter your 10-digit number"
                                     classNames={{
                                         label: '!text-white',
-                                        inputWrapper: 'border-green-400 hover:!border-white focus-within:!border-white'
+                                        inputWrapper: 'border-[#712C82] focus-within:!border-white'
                                     }}
                                     className='max-w-xs mt-4'
                                 />
@@ -96,7 +98,7 @@ export default function Herosection(props: any) {
                                     label="Enter your Email address (optional)"
                                     classNames={{
                                         label: '!text-white',
-                                        inputWrapper: 'border-green-400 hover:!border-white focus-within:!border-white'
+                                        inputWrapper: 'border-[#712C82] focus-within:!border-white'
                                     }}
                                     className='max-w-xs mt-4'
                                 />
@@ -109,15 +111,15 @@ export default function Herosection(props: any) {
                                     size='lg'
                                     classNames={{
                                         label: '!text-white',
-                                        inputWrapper: 'border-green-400 hover:!border-white focus-within:!border-white'
+                                        inputWrapper: 'border-[#712C82] focus-within:!border-white'
                                     }}
                                     className='max-w-xs mt-4 text-white'
                                 />
                                 <Button
                                     type='submit'
-                                    color="primary"
+                                   // color="primary"
                                     variant='bordered'
-                                    className='mt-6 opacity-100'
+                                    className='mt-6 opacity-100 bg-[#712C82] border-none text-white'
                                     disabled={isLoading}
                                 >
                                     {isLoading ? 'Updating information...' : 'Create Magic'}
@@ -126,9 +128,10 @@ export default function Herosection(props: any) {
                         </div>
                     </form>
                 )}
+                
                 <p>{submissionStatus === 'failure' && `Error: ${failure}`}</p>
                 <div className='flex justify-end'>
-                    <Link isBlock showAnchorIcon href="#" color="primary" target='_blank'>
+                    <Link isBlock showAnchorIcon href="/privacy-policy" target='_blank' className='font-bold text-white'>
                         Privacy Policy
                     </Link>
                 </div>

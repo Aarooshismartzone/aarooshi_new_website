@@ -1,13 +1,14 @@
+import axios from 'axios';
 
 export type CategoryType = {
-    id: number;
+    _id: string;
     slug: string;
-    name: string
-}
+    name: string;
+};
 
 export type PostType = {
-    id: number;
-    cat_id: number;
+    _id: string;
+    cat_id: string;
     cat_name: string;
     title: string;
     slug: string;
@@ -16,19 +17,6 @@ export type PostType = {
     tags: string;
     keywords: string;
     description: string;
-    readable_mins: number;
-    date: string
+    readable_mins: string;
+    date: string;
 }
-
-export const fetchCategoryData = async () => {
-    const response = await fetch('https://busytiger.com/api/getblogcategories');
-    const jsonData = await response.json();
-    return jsonData;
-};
-
-export const fetchPostData = async () => {
-    const response = await fetch('https://busytiger.com/api/getblogposts');
-    const jsonData = await response.json();
-    return jsonData;
-};
-

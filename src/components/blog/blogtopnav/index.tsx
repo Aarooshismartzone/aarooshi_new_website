@@ -1,11 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import './style.scss'
 import Image from 'next/image';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
+import { CategoryType } from '@/app/(blog)/blog/data';
 import { CategoryData } from '../data';
-import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
-import { CategoryType, fetchCategoryData } from '@/app/(blog)/blog/data';
+import ExtLinks from '@/components/links';
 
 
 
@@ -13,32 +13,32 @@ export default function BlogTopNav() {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-    const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
+    // const [categoryData, setCategoryData] = useState<CategoryType[]>([]);
 
-    useEffect(() => {
-        fetchCategoryData().then(res => {
-            setCategoryData(res);
-        })
-    }, [])
+    // useEffect(() => {
+    //     fetchCategoryData().then(res => {
+    //         setCategoryData(res);
+    //     })
+    // }, [])
 
     return (
         <>
-            <Navbar onMenuOpenChange={setIsMenuOpen} className=' bg-gray-900' maxWidth='full'>
+            <Navbar onMenuOpenChange={setIsMenuOpen} className='blogtopnav' maxWidth='full'>
                 <NavbarContent>
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className="sm:hidden mt-0"
                     />
                     <NavbarBrand>
-                    <Link href='/'><Image src="/images/logo.png" width={100} height={100} className='w-52 h-auto' alt='Aarooshi' /></Link>
+                        <Link href='/'><Image src="/images/logo.png" className='w-52 h-auto' alt='Aarooshi' height={600} width={600} /></Link>
                     </NavbarBrand>
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                    {categoryData.map((item, index) => {
+                    {CategoryData.map((item: CategoryType, index) => {
                         return (
                             <NavbarItem key={index}>
-                                <Link className='text-white' color="foreground" href="#">
+                                <Link className='text-white font-bold hover:text-[#D85EF7]' color="foreground" href={`/blog/${item.slug}`}>
                                     {item.name}
                                 </Link>
                             </NavbarItem>
@@ -48,21 +48,19 @@ export default function BlogTopNav() {
 
                 </NavbarContent>
                 <NavbarContent justify="end">
-                <div className='flex justify-evenly w-40 mt-2'>
-                        <FaInstagramSquare />
-                        <BsTwitterX />
-                        <FaLinkedin />
+                    <div className='flex justify-evenly w-40 mt-2'>
+                        <ExtLinks />
                     </div>
                 </NavbarContent>
                 <NavbarMenu>
-                    {categoryData.map((item, index) => (
+                    {CategoryData.map((item: CategoryType, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
                                 color={
-                                    index === 2 ? "primary" : index === categoryData.length - 1 ? "danger" : "foreground"
+                                    index === 2 ? "primary" : index === CategoryData.length - 1 ? "danger" : "foreground"
                                 }
                                 className="w-full"
-                                href="#"
+                                href={`/blog/${item.slug}`}
                                 size="lg"
                             >
                                 {item.name}

@@ -16,7 +16,7 @@ export default function Page() {
                 <Topiclist />
                 <GetInTouch />
             </div>
-            <div className='md:hidden block'>
+            <div className='md:hidden block abovetopbar'>
                 <GetInTouch />
             </div>
         </>

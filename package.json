@@ -17,7 +17,7 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "@nextui-org/react": "^2.2.10",
     "@vercel/speed-insights": "^1.0.10",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "child_process": "^1.0.2",
     "dns": "^0.2.2",
     "framer-motion": "^11.0.14",
